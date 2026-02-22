@@ -11,12 +11,12 @@ export async function generateMetadata() {
   return {
     title: meta("authLogin.title"),
     description: meta("authLogin.description"),
-    metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
+    metadataBase: process.env.VERCEL_URL,
 
     openGraph: {
       title: meta("authLogin.title"),
       description: meta("authLogin.description"),
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/login`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/login`,
       type: "website",
     },
   };

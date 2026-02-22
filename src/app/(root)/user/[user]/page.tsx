@@ -16,12 +16,12 @@ export async function generateMetadata(props: {
   return {
     title: userName,
     description: meta("userPage.description"),
-    metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
+    metadataBase: process.env.NEXT_PUBLIC_VERCEL_URL,
 
     openGraph: {
       title: userName,
       description: meta("userPage.description"),
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/user/${user}`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/user/${user}`,
       type: "profile",
     },
   };

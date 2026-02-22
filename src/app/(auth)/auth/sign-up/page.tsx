@@ -10,12 +10,12 @@ export async function generateMetadata() {
   return {
     title: meta("authSignup.title"),
     description: meta("authSignup.description"),
-    metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
+    metadataBase: process.env.NEXT_PUBLIC_VERCEL_URL,
 
     openGraph: {
       title: meta("authSignup.title"),
       description: meta("authSignup.description"),
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/sign-up`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/sign-up`,
       type: "website",
     },
   };
