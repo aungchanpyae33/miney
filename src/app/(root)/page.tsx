@@ -8,12 +8,12 @@ export async function generateMetadata() {
   return {
     title: meta("default.title"),
     description: meta("default.description"),
-    metadataBase: process.env.VERCEL_URL,
+    metadataBase: `https://${process.env.VERCEL_URL}`,
 
     openGraph: {
       title: meta("default.title"),
       description: meta("default.description"),
-      url: process.env.VERCEL_URL,
+      url: `https://${process.env.VERCEL_URL}`,
       type: "website",
     },
   };

@@ -16,12 +16,12 @@ export async function generateMetadata(props: {
   return {
     title: userName,
     description: meta("userPage.description"),
-    metadataBase: process.env.VERCEL_URL,
+    metadataBase: `https://${process.env.VERCEL_URL}`,
 
     openGraph: {
       title: userName,
       description: meta("userPage.description"),
-      url: `${process.env.VERCEL_URL}/user/${user}`,
+      url: `https://${process.env.VERCEL_URL}/user/${user}`,
       type: "profile",
     },
   };
