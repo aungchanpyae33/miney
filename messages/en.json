@@ -1,0 +1,367 @@
+{
+  "FormEdit": {
+    "text_name": {
+      "label": "Name",
+      "placeholder": "Your name"
+    },
+    "text_textarea_bio": {
+      "label": "Bio",
+      "placeholder": "How would you describe yourself?"
+    },
+    "text_date_birth": {
+      "label": "Birth Year",
+      "placeholder": "Enter your birth year only"
+    },
+    "text_select_gender": {
+      "label": "Your Gender",
+      "options": {
+        "none": "Select your gender",
+        "male": "Male",
+        "female": "Female",
+        "nonBinary": "Non-binary",
+        "preferNotToSay": "Prefer not to say"
+      }
+    },
+    "text_select_friendness": {
+      "label": "How friendly do you think you are?",
+      "options": {
+        "none": "Select a number",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    "text_select_relationship": {
+      "label": "Relationship Status",
+      "options": {
+        "none": "Select your relationship status",
+        "single": "Single",
+        "relationship": "In a relationship",
+        "married": "Married",
+        "complicated": "It's complicated"
+      }
+    },
+    "text_pick_mbti": {
+      "label": "MBTI",
+      "placeholder": "e.g. ISTJ"
+    },
+    "multiple_own_hobby": {
+      "label": "Your Hobbies",
+      "placeholder": "e.g. Listening to music..."
+    },
+    "multiple_fav_song": {
+      "label": "Favorite Songs",
+      "placeholder": "e.g. Love 119 (RIIZE)..."
+    },
+    "multiple_fav_artist": {
+      "label": "Favorite Artists",
+      "placeholder": "e.g. NewJeans..."
+    },
+    "multiple_fav_books": {
+      "label": "Favorite Books",
+      "placeholder": "e.g. My Father’s Biography by Swe Min Danu Phyu..."
+    },
+    "multiple_fav_food": {
+      "label": "Favorite Foods",
+      "placeholder": "e.g. Fried chicken..."
+    },
+    "multiple_fav_movie": {
+      "label": "Favorite Movies",
+      "placeholder": "e.g. Puss in Boots: The Last Wish..."
+    },
+    "multiple_own_comfort_zone": {
+      "label": "Your Comfort Zones",
+      "placeholder": "e.g. Staying at home..."
+    }
+  },
+  "FormView": {
+    "text_name": {
+      "label": "Name"
+    },
+    "text_textarea_bio": {
+      "label": "Bio"
+    },
+    "text_date_birth": {
+      "label": "Birth Year"
+    },
+    "text_select_gender": {
+      "label": "Gender",
+      "options": {
+        "none": "Select your gender",
+        "male": "Male",
+        "female": "Female",
+        "nonBinary": "Non-binary",
+        "preferNotToSay": "Prefer not to say"
+      }
+    },
+    "text_select_friendness": {
+      "label": "friendliness"
+    },
+    "text_select_relationship": {
+      "label": "Relationship Status",
+      "options": {
+        "none": "Select your relationship status",
+        "single": "Single",
+        "relationship": "In a relationship",
+        "married": "Married",
+        "complicated": "It's complicated"
+      }
+    },
+    "text_pick_mbti": {
+      "label": "MBTI"
+    },
+    "multiple_own_hobby": {
+      "label": "Hobbies"
+    },
+    "multiple_fav_song": {
+      "label": "Favorite Songs"
+    },
+    "multiple_fav_artist": {
+      "label": "Favorite Artists"
+    },
+    "multiple_fav_books": {
+      "label": "Favorite Books"
+    },
+    "multiple_fav_food": {
+      "label": "Favorite Foods"
+    },
+    "multiple_fav_movie": {
+      "label": "Favorite Movies"
+    },
+    "multiple_own_comfort_zone": {
+      "label": "Comfort Zones"
+    }
+  },
+  "ErrorMsg": {
+    "required": "{label} field needs to be filled in order to sumbit",
+    "noMBTI": "no MBTI fount",
+    "maxLength": "Max length is {max} characters",
+    "minLength": "Max length is {min} characters",
+    "onlyNumbers": "Only  English numbers are allowed",
+    "invalidYear": "Please enter the correct year of birth",
+    "outOfRangeYear": "Please enter a year between 1900 and {currentYear}",
+    "wrongEmail": "Please provide valid email address",
+    "wentWrong": "Something went wrong",
+    "alreadyEmail": "This email is alreay exist",
+    "notConfirmEmail": "Please comfirm the email first",
+    "wrongCredentials": "The credentials you typed are incorrect",
+    "alreadyUser": "User is already exist. Please sign in",
+    "notFoundUser": "User does not exist. Please Sign up",
+    "notFieldChange": "Input field datas are not changed",
+    "wentWrongUploadImage": "There is something wrong with uploading the image"
+  },
+  "WarningMsg": {
+    "3isMax": "Maximum of 3 items are allowed",
+    "unsaved": "You have unsaved changes. Are you sure you want to view without saving?",
+    "deleteProfileWarning": "By clicking Delete, your profile will be permanently removed. This action cannot be undone.",
+    "deleteUserWarning": "By clicking Delete, your account will be permanently removed. This action cannot be undone.",
+    "needToLogin": "Sign In Required",
+    "NotFound": "Not Found"
+  },
+  "NotiMsg": {
+    "editSuccess": "Your profile data is successfully updated",
+    "deleteProfileSuccess": "Your profile data is successfully deleted",
+    "deleteUserSuccess": "Your account is successfully deleted"
+  },
+  "block": {
+    "noti": "Notice",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "discard": "Discard",
+    "delete": "Delete",
+    "close": "Close",
+    "submit": "Submit",
+    "save": "Save",
+    "crop": "Crop Your Picture",
+    "theme": "Theme",
+    "light": "light",
+    "dark": "dark",
+    "deviceTheme": "device theme",
+    "textAreaNotice": "By clicking the enter in keyboard, you can add more items",
+    "warningImage": " Upload (png,jpeg,webp) type and maximum file size is 3MB",
+    "not_valid": "Please select a valid image file.",
+    "exceed_size": "Image size cannot exceed 3MB.",
+    "needLoginForm": "You need to login before creating your profile form",
+    "login": "Login",
+    "signUp": "Sign Up",
+    "logout": "Logout",
+    "edit": "Edit",
+    "view": "View",
+    "language": "Language",
+    "english": "English",
+    "myanmar": "Myanmar",
+    "footerNoti": "This profile-building web application, Miney, is maintained by only one person. Therefore, it is not easy to monitor or provide support in real-time. For this reason, please be aware that you should not input any important personal information (sensitive data). Also, please be careful not to upload photos or text that may cause annoyance or distress to others.",
+    "legal": "Legal Information",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "cookie": "Cookie Policy",
+    "contact": "Contact",
+    "email": "mineybubble@outlook.com",
+    "beforeSubmitNotice": "By saving the profile form, you are deemed to have accepted Miney's <privacy>Privacy Policy</privacy> and <terms>Terms & Conditions</terms> ",
+    "profileLinkCopy": "Profile link copied",
+    "notFoundData": "User may not exist or create the profile yet.",
+    "changeLanguage": "Language",
+    "en": "English",
+    "my": "မြန်မာ",
+    "deleteAcc": "Delete the Account"
+  },
+  "Privacy": {
+    "title": "Privacy Policy — Miney",
+    "lastUpdated": "Last updated : ",
+    "date": "25 November 2025",
+    "intro": "Miney respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal data when you use our profile-sharing web application.",
+
+    "section1": {
+      "title": "1. Information We Collect",
+      "desc": "When you use Miney, we collect the following information:",
+      "mandatory": "Name\nGender\nFriendliness",
+      "optional": "Profile photo\nBio\nBirth Year\nRelationship status\nMBTI\nHobbies\nFavorite songs, artists, books, foods, movies\nComfort zones",
+      "media": "Media: Users may optionally upload images. No videos or documents are required."
+    },
+
+    "section2": {
+      "title": "2. How We Use Your Data",
+      "use": "To create your public profile so you can share it with others.\nTo personalize your app experience.",
+      "no": "We do not:\nCollect analytics (e.g., Google Analytics, Sentry)\nTrack errors or log user activity"
+    },
+
+    "section3": {
+      "title": "3. Data Storage",
+      "desc": "Your profile information is stored in Supabase Postgres.\nImages are stored in Supabase Storage."
+    },
+
+    "section4": {
+      "title": "4. Authentication",
+      "desc": "We use Supabase Auth with Email/Password and Google OAuth."
+    },
+
+    "section5": {
+      "title": "5. Data Sharing",
+      "desc": "We never share your personal data with third parties, except necessary infrastructure providers like Supabase or Vercel."
+    },
+
+    "section6": {
+      "title": "6. User Control",
+      "desc": "You can delete your account and all associated profile data through your dashboard. You cannot recover your data once deleted."
+    },
+
+    "section7": {
+      "title": "7. Security",
+      "desc": "We implement standard security practices to protect your data, but please note that no system is completely secure."
+    },
+
+    "section8": {
+      "title": "8. Support",
+      "contact": "Contact : ",
+      "email": "mineybubble@outlook.com"
+    }
+  },
+  "Terms": {
+    "title": "Terms & Conditions – Miney",
+    "lastUpdated": "Last updated : ",
+    "date": "25 November 2025",
+    "intro": "By using Miney, you agree to the following terms:",
+
+    "section1": {
+      "title": "1. About Miney",
+      "desc": "Miney is a profile-sharing web app developed and maintained solely by Aung Chan Pyae (Bubble).",
+      "warning": "This profile-building web application, Miney, is maintained by only one person. Therefore, it is not easy to monitor or provide support in real-time. For this reason, please be aware that you should not input any important personal information (sensitive data). Also, please be careful not to upload photos or text that may cause annoyance or distress to others."
+    },
+
+    "section2": {
+      "title": "2. User Responsibility",
+      "items": "• Users must provide accurate information for public profiles.\n• Do not upload harmful or illegal content."
+    },
+
+    "section3": {
+      "title": "3. Account Management",
+      "desc": "Users can create, edit, or delete their profiles at any time."
+    },
+
+    "section4": {
+      "title": "4. Limitation of Liability",
+      "items": "• Miney is not a commerical product.\n• The developer is not responsible for any damages arising from the use of the app."
+    },
+
+    "section5": {
+      "title": "5. Modifications",
+      "desc": "Terms may change over time. Continued use constitutes acceptance."
+    },
+    "section6": {
+      "title": "6. Support",
+      "contact": "Contact : ",
+      "email": "mineybubble@outlook.com"
+    }
+  },
+  "Cookie": {
+    "title": "Cookie Policy — Miney",
+    "lastUpdated": "Last updated : ",
+    "date": "25 November 2025",
+    "section1": {
+      "title": "1. What Are Cookies?",
+      "desc": "Cookies are small files stored on your device to help the app remember your preferences and authentication session."
+    },
+    "section2": {
+      "title": "2. How We Use Cookies",
+      "list": "Authentication: Keep you logged in securely.\nLanguage Preference: Store your chosen locale/language."
+    },
+    "section3": {
+      "title": "3. Managing Cookies",
+      "desc": "You can clear or block cookies in your browser, but some app functionality may not work properly."
+    },
+    "section4": {
+      "title": "4. Support",
+      "contact": "Contact : ",
+      "email": "mineybubble@outlook.com"
+    }
+  },
+  "Auth": {
+    "createAccount": "Create a new Account",
+    "loginAccount": "Login to an Account",
+    "email": "email",
+    "emailPlaceholder": "email@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "password",
+    "login": "Login",
+    "signUp": "Sign Up",
+    "noAcc": "Don't have an account? <link>Register here</link>",
+    "alreadyAcc": "Already have an account? <link>Log in here</link>",
+    "signUpSuccess": "Verify your email",
+    "signUpSuccessContent": "Sign-up successful! Please check your email to confirm your account. If you don’t see it, check your spam folder."
+  },
+  "MetaData": {
+    "cookiePage": {
+      "title": "Cookie Policy",
+      "description": "Learn how miney use cookies to improve your experience and personalize content."
+    },
+    "termsPage": {
+      "title": "Terms & Conditions",
+      "description": "Learn the Terms & Conditions of miney web app"
+    },
+    "privacyPage": {
+      "title": "Privacy Policy",
+      "description": "Learn the Privacy Policy of miney web app"
+    },
+    "userPage": {
+      "description": "Check out this Miney profile to learn about the user's hobbies, favorites, and personality."
+    },
+    "default": {
+      "title": "Miney",
+      "description": "Miney is a social profile platform where you can share your interests, favorites, and personality in one simple card."
+    },
+    "authLogin": {
+      "title": "Login",
+      "description": "Log in to your Miney account to access your profile, edit your information and share your personal card."
+    },
+    "authSignup": {
+      "title": "Sign Up",
+      "description": "Signup your Miney account to access your profile, edit your information and share your personal card."
+    },
+    "authConfirm": {
+      "title": "Verify Account",
+      "description": "Verify your account using the confirmation link sent to your email."
+    }
+  }
+}
