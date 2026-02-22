@@ -16,7 +16,7 @@ export async function generateMetadata() {
     openGraph: {
       title: meta("authLogin.title"),
       description: meta("authLogin.description"),
-      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/login`,
+      url: `${process.env.VERCEL_URL}/auth/login`,
       type: "website",
     },
   };
