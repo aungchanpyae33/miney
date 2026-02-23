@@ -50,19 +50,7 @@ function LoginFormContainer() {
   }
   return (
     <FormProvider {...methods}>
-      <form
-        onSubmit={methods.handleSubmit(loginAction)}
-        onKeyDown={(e) => {
-          // Prevent Enter from submitting the form
-          if (e.key === "Enter") {
-            const target = e.target as HTMLElement;
-            if (target.tagName === "INPUT" || target.tagName === "TEXTAREA") {
-              e.preventDefault();
-            }
-          }
-        }}
-        className=" space-y-5"
-      >
+      <form onSubmit={methods.handleSubmit(loginAction)} className=" space-y-5">
         <EmailInput />
         <PasswordInput />
         <RootErrorText />
