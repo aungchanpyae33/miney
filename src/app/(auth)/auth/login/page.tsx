@@ -11,13 +11,14 @@ export async function generateMetadata() {
   return {
     title: meta("authLogin.title"),
     description: meta("authLogin.description"),
-    metadataBase: `https://${process.env.VERCEL_URL}`,
+    metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
 
     openGraph: {
       title: meta("authLogin.title"),
       description: meta("authLogin.description"),
-      url: `https://${process.env.VERCEL_URL}/auth/login`,
+      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/auth/login`,
       type: "website",
+      siteName: "Miney",
     },
   };
 }

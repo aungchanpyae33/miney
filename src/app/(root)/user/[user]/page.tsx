@@ -8,21 +8,35 @@ export async function generateMetadata(props: {
   params: Promise<{ user: string }>;
 }) {
   const { user } = await props.params;
+  const meta = await getTranslations("MetaData");
   const { data, status } = await getUserDynamicProfileCache(user);
-  if (!data || status !== 200) return;
+  if (!data || status !== 200)
+    return {
+      title: meta("userPage.notFoundTitle"),
+      description: meta("userPage.notFoundDescription"),
+      metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
+
+      openGraph: {
+        title: meta("userPage.notFoundTitle"),
+        description: meta("userPage.notFoundDescription"),
+        url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/user/${user}`,
+        type: "profile",
+        siteName: "Miney",
+      },
+    };
   const userName = data.text_name;
 
-  const meta = await getTranslations("MetaData");
   return {
     title: userName,
     description: meta("userPage.description"),
-    metadataBase: `https://${process.env.VERCEL_URL}`,
+    metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
 
     openGraph: {
       title: userName,
       description: meta("userPage.description"),
-      url: `https://${process.env.VERCEL_URL}/user/${user}`,
+      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/user/${user}`,
       type: "profile",
+      siteName: "Miney",
     },
   };
 }

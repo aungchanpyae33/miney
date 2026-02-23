@@ -345,10 +345,13 @@
       "description": "Learn the Privacy Policy of miney web app"
     },
     "userPage": {
-      "description": "Check out this Miney profile to learn about the user's hobbies, favorites, and personality."
+      "description": "Check out this Miney profile to learn about the user's hobbies, favorites, and personality.",
+      "notFoundTitle": "User Not Found",
+      "notFoundDescription": "The user you are looking for does not exist."
     },
     "default": {
       "title": "Miney",
+
       "description": "Miney is a social profile platform where you can share your interests, favorites, and personality in one simple card."
     },
     "authLogin": {

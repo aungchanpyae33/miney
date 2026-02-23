@@ -10,13 +10,14 @@ export async function generateMetadata() {
   return {
     title: meta("authConfirm.title"),
     description: meta("authConfirm.description"),
-    metadataBase: `https://${process.env.VERCEL_URL}`,
+    metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
 
     openGraph: {
       title: meta("authConfirm.title"),
       description: meta("authConfirm.description"),
-      url: `https://${process.env.VERCEL_URL}/auth/sign-up-success`,
+      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/auth/sign-up-success`,
       type: "website",
+      siteName: "Miney",
     },
   };
 }

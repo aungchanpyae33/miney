@@ -8,6 +8,13 @@ export async function generateMetadata() {
   return {
     title: meta("cookiePage.title"),
     description: meta("cookiePage.description"),
+    openGraph: {
+      title: meta("cookiePage.title"),
+      description: meta("cookiePage.description"),
+      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/cookie`,
+      type: "website",
+      siteName: "Miney",
+    },
   };
 }
 
