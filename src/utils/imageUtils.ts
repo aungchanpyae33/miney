@@ -40,7 +40,7 @@ export default async function getCroppedImg(
         if (!b) reject(new Error("Canvas is empty"));
         else resolve(b);
       },
-      "image/webp", // best for avatars
+      "image/jpeg",
       0.8,
     );
   });
