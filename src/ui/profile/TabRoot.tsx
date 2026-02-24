@@ -11,13 +11,11 @@ import ViewSwitcherButton from "./ViewSwitcherButton";
 function TabRoot({
   editChild,
   viewChild,
-  deleteButton,
-  shareButton,
+  rightSection,
 }: {
   editChild: ReactNode;
   viewChild: ReactNode;
-  deleteButton: ReactNode;
-  shareButton: ReactNode;
+  rightSection: ReactNode;
 }) {
   const stickyRef = useRef<HTMLTableSectionElement | null>(null);
   const tabs = useChangeTab((state: tabsProps) => state.tabs);
@@ -72,8 +70,7 @@ function TabRoot({
               "absolute right-3 top-0  rounded-full transition-transform h-full flex items-center justify-center gap-4 duration-[300ms] ease-in-out",
             )}
           >
-            {shareButton}
-            {deleteButton}
+            {rightSection}
           </div>
         </div>
       </div>

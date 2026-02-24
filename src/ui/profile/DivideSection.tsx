@@ -7,10 +7,9 @@ import {
 import { getUserProfile } from "@/database/data";
 import ProfileView from "./ProfileView";
 import ProfileForm from "./ProfileForm";
-import ProfileShareButton from "./ProfileShareButton";
-import ProfileDeleteButton from "./ProfileDeleteButton";
 import { userFetch } from "@/lib/userFetch";
 import { returnUserId } from "@/lib/returnUserId";
+import ProfileRightSection from "./ProfileRightSection";
 export default async function DivideSection() {
   const user = await userFetch();
   const user_id = returnUserId(user);
@@ -25,8 +24,7 @@ export default async function DivideSection() {
       <TabRoot
         editChild={<ProfileForm key={"edit"} />}
         viewChild={<ProfileView key={"view"} />}
-        shareButton={<ProfileShareButton />}
-        deleteButton={<ProfileDeleteButton />}
+        rightSection={<ProfileRightSection />}
       />
     </HydrationBoundary>
   );

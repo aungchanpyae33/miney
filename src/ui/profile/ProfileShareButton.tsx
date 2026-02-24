@@ -1,13 +1,9 @@
 "use client";
 import { Check, Link } from "lucide-react";
 import IconWrapper from "../general/IconWrapper";
-import { useQuery } from "@tanstack/react-query";
-import { getUserProfileClient } from "@/database/client";
 import { useRef, useState } from "react";
 import TipToast from "../general/TipToast";
 import { useTranslations } from "next-intl";
-import { useUserInfoContext } from "../UserInfoFetch/UserInfoContext";
-import { returnUserId } from "@/lib/returnUserId";
 const handleCopy = async (id: string) => {
   const origin = window.location.origin;
 
@@ -18,29 +14,11 @@ const handleCopy = async (id: string) => {
   }
 };
 const removeTime = 1000;
-function ProfileShareButton() {
-  const { userInfo } = useUserInfoContext();
-  const user_id = returnUserId(userInfo);
-  const { data: queryData } = useQuery({
-    queryKey: ["user-profile", user_id],
-    queryFn: () => getUserProfileClient(),
-    enabled: !!user_id,
-  });
+function ProfileShareButton({ id }: { id: string }) {
   const b = useTranslations("block");
   const [click, setClick] = useState(false);
-  const {
-    data: profileData,
-    error,
-    status,
-  } = queryData || {
-    data: null,
-    error: "something went wrong",
-  };
 
   const settimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  if (!profileData || error || status !== 200) return;
-  if (profileData.id.length === 0) return;
-  const id = profileData.id;
 
   function handleLinkClick() {
     if (!settimeoutRef.current) {
