@@ -68,7 +68,7 @@
       "placeholder": "ဥပမာ-ကြက်ကြော်..."
     },
     "multiple_fav_movie": {
-      "label": "နှစ်သက်ရာရုပ်ရှင်များ",
+      "label": "နှစ်သက်ရာရုပ်ရှင်နှင့်ဇာတ်လမ်းတွဲများ",
       "placeholder": "ဥပမာ-Puss in Boots:The Last Wish..."
     },
     "multiple_own_comfort_zone": {
@@ -128,7 +128,7 @@
       "label": "နှစ်သက်ရာအစားအစာများ"
     },
     "multiple_fav_movie": {
-      "label": "နှစ်သက်ရာရုပ်ရှင်များ"
+      "label": "နှစ်သက်ရာရုပ်ရှင်နှင့်ဇာတ်လမ်းတွဲများ"
     },
     "multiple_own_comfort_zone": {
       "label": "ကွန်ဖော့တ်ဇုန်(comfort zone)"

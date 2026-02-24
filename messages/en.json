@@ -68,7 +68,7 @@
       "placeholder": "e.g. Fried chicken..."
     },
     "multiple_fav_movie": {
-      "label": "Favorite Movies",
+      "label": "Favorite Movies & Series",
       "placeholder": "e.g. Puss in Boots: The Last Wish..."
     },
     "multiple_own_comfort_zone": {
@@ -128,7 +128,7 @@
       "label": "Favorite Foods"
     },
     "multiple_fav_movie": {
-      "label": "Favorite Movies"
+      "label": "Favorite Movies & Series"
     },
     "multiple_own_comfort_zone": {
       "label": "Comfort Zones"
