@@ -10,7 +10,7 @@ import RootErrorText from "./RootErrorText";
 import { isAuthApiError } from "@supabase/supabase-js";
 import { useTranslations } from "next-intl";
 import { authErrorReturn } from "@/lib/auth/authErrorReturn";
-import { useState } from "react";
+import { useNaviSet } from "@/lib/CustomHooks/useNaviSet";
 type LoginValues = {
   email: string;
   password: string;
@@ -18,7 +18,7 @@ type LoginValues = {
 function LoginFormContainer() {
   const router = useRouter();
   const loader = useTopLoader();
-  const [isNavigating, setIsNavigating] = useState(false);
+  const [isNavigating, setIsNavigating] = useNaviSet();
   const e = useTranslations("ErrorMsg");
   const methods = useForm<LoginValues>();
   async function loginAction(data: LoginValues) {
@@ -48,6 +48,7 @@ function LoginFormContainer() {
       loader.done();
     }
   }
+
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(loginAction)} className=" space-y-5">

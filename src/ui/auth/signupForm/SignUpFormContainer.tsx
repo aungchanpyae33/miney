@@ -10,7 +10,7 @@ import EmailInput from "../loginForm/EmailInput";
 import PasswordInput from "../loginForm/PasswordInput";
 import RootErrorText from "../loginForm/RootErrorText";
 import SubmitButton from "../loginForm/SubmitButton";
-import { useState } from "react";
+import { useNaviSet } from "@/lib/CustomHooks/useNaviSet";
 type SignUpValues = {
   email: string;
   password: string;
@@ -18,7 +18,7 @@ type SignUpValues = {
 function SignUpFormContainer() {
   const router = useRouter();
   const loader = useTopLoader();
-  const [isNavigating, setIsNavigating] = useState(false);
+  const [isNavigating, setIsNavigating] = useNaviSet();
   const e = useTranslations("ErrorMsg");
   const methods = useForm<SignUpValues>();
   async function loginAction(data: SignUpValues) {
