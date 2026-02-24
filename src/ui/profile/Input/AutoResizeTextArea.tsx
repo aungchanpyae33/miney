@@ -193,7 +193,7 @@ export default function AutoResizeTextArea({
                 onChange(e);
               }}
               onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === ",") {
+                if (e.key === "Enter") {
                   if (value) {
                     onChange("");
                     nextIndexRef.current = null;
