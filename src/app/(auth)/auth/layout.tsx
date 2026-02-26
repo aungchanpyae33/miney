@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ReactNode, Suspense } from "react";
 import "../../globals.css";
-import { Geist } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import PageLoading from "@/ui/loading/PageLoading";
 import { NextIntlClientProvider } from "next-intl";
@@ -23,15 +23,14 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  display: "swap",
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
   subsets: ["latin"],
 });
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className}  antialiased`}>
+      <body className={`${notoSans.className}  antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
