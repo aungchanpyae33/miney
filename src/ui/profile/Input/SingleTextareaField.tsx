@@ -50,7 +50,7 @@ export function SingleTextareaField({
       name={name}
       className={`flex flex-col items-start gap-2 ${className || ""}`}
     >
-      <Field.Label className="text-sm flex justify-between w-full font-medium ">
+      <Field.Label className=" flex justify-between w-full font-medium ">
         <span className=" font-semibold">
           {" "}
           {label}
@@ -69,9 +69,10 @@ export function SingleTextareaField({
         name={refName}
         ref={ref}
         className={clsx(
-          "pl-3.5 text-base block  bg-cardcontainer w-full rounded-md border border-bordersoft resize-none p-3 min-h-[100px] max-h-[150px]",
+          "pl-3.5 text-base block  bg-cardcontainer w-full rounded-md border appearance-none outline-none border-bordersoft resize-none p-3 min-h-[100px] max-h-[150px]",
           {
-            "ring-2 ring-error ring-offset-0  ": fieldError,
+            "ring-2 ring-error ring-offset-0 ": fieldError,
+            "focus:ring-2 focus:ring-blue-800 focus:ring-offset-0": !fieldError,
           },
         )}
         rows={1}

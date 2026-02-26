@@ -102,7 +102,7 @@ export default function AutoResizeTextArea({
         }}
         render={({ field: { onChange, onBlur, value, ref } }) => (
           <>
-            <Field.Label className="text-sm flex w-full justify-between font-semibold">
+            <Field.Label className="flex w-full justify-between font-semibold">
               <span>
                 {label}
                 {required && <span className="text-error ml-1">*</span>}
@@ -172,9 +172,11 @@ export default function AutoResizeTextArea({
               onBlur={onBlur}
               spellCheck="false"
               className={clsx(
-                "pl-3.5 text-base block break-words whitespace-pre-wrap rounded-md border border-bordersoft  focus:ring-2 focus:ring-blue-800 focus:ring-offset-0   bg-cardcontainer w-full resize-none p-3 min-h-[100px] max-h[150px]",
+                "pl-3.5 text-base block break-words whitespace-pre-wrap rounded-md border border-bordersoft bg-cardcontainer outline-none appearance-none w-full resize-none p-3 min-h-[100px] max-h[150px]",
                 {
-                  "ring-2 ring-error ring-offset-0  ": fieldError,
+                  "ring-2 ring-error ring-offset-0 ": fieldError,
+                  "focus:ring-2 focus:ring-blue-800 focus:ring-offset-0":
+                    !fieldError,
                 },
               )}
               rows={1}

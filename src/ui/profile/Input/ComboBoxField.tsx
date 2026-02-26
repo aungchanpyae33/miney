@@ -41,8 +41,8 @@ export default function ComboboxField({
           name={name}
           onValueChange={(val) => field.onChange(val || "")}
         >
-          <div className=" flex flex-col gap-2 text-sm leading-5 font-medium">
-            <label className=" font-semibold" htmlFor={id}>
+          <div className=" flex flex-col gap-2  leading-5">
+            <label className=" font-semibold mb-2" htmlFor={id}>
               {label}
               {required && <span className="text-error ml-1">*</span>}
             </label>
@@ -56,9 +56,11 @@ export default function ComboboxField({
                 placeholder={placeholder}
                 id={id}
                 className={clsx(
-                  "h-10 w-full outline-none  font-normal  pl-3.5   text-base bg-cardcontainer ",
+                  "h-10 w-full   font-normal  pl-3.5 appearance-none outline-none    bg-cardcontainer ",
                   {
-                    "ring-2 ring-error ring-offset-0": fieldError,
+                    "ring-2 ring-error ring-offset-0 ": fieldError,
+                    "focus:ring-2 focus:ring-blue-800 focus:ring-offset-0":
+                      !fieldError,
                   },
                 )}
               />

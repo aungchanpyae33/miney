@@ -66,7 +66,7 @@ export function NumberField({
       name={name}
       className={`flex flex-col items-start gap-2 ${className || ""}`}
     >
-      <Field.Label className="text-sm flex w-full justify-between font-medium">
+      <Field.Label className=" flex w-full justify-between font-medium">
         <span className=" font-semibold">
           {label}
           {required && <span className="text-error ml-1">*</span>}
@@ -89,9 +89,10 @@ export function NumberField({
         maxLength={maxLength}
         placeholder={placeholder}
         className={clsx(
-          "h-10 w-full rounded-md border border-bordersoft pl-3.5 text-base  bg-cardcontainer focus:ring-2 focus:ring-blue-800 focus:ring-offset-0",
+          "h-10 w-full rounded-md border border-bordersoft pl-3.5 text-base appearance-none outline-none  bg-cardcontainer",
           {
-            "ring-2 ring-error ring-offset-0": fieldError,
+            "ring-2 ring-error ring-offset-0 ": fieldError,
+            "focus:ring-2 focus:ring-blue-800 focus:ring-offset-0": !fieldError,
           },
         )}
       />

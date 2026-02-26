@@ -51,7 +51,7 @@ export function TextField({
       name={name}
       className={`flex flex-col items-start gap-2 ${className || ""}`}
     >
-      <Field.Label className="text-sm flex justify-between w-full font-medium">
+      <Field.Label className=" flex justify-between w-full font-medium">
         <span className=" font-semibold ">
           {label}
           {required && <span className="text-error ml-1">*</span>}
@@ -70,9 +70,10 @@ export function TextField({
         spellCheck="false"
         placeholder={placeholder}
         className={clsx(
-          "h-10 w-full rounded-md border border-bordersoft pl-3.5 text-base  bg-cardcontainer focus:ring-2 focus:ring-blue-800 focus:ring-offset-0",
+          "h-10 w-full rounded-md border border-bordersoft pl-3.5 text-base appearance-none  bg-cardcontainer outline-none ",
           {
-            "ring-2 ring-error ring-offset-0": inputValue.length > maxLength,
+            "ring-2 ring-error ring-offset-0 ": fieldError,
+            "focus:ring-2 focus:ring-blue-800 focus:ring-offset-0": !fieldError,
           },
         )}
       />

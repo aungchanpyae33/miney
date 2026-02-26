@@ -48,9 +48,11 @@ export default function SelectField({
             <Select.Trigger
               ref={field.ref}
               className={clsx(
-                "flex h-10 min-w-36 items-center justify-between gap-3 rounded-md border border-bordersoft pr-1 pl-3.5  text-base bg-cardcontainer  select-none hover:bg-background   focus-visible:ring-2 focus-visible:-ring-offset-0 focus-visible:ring-blue-800 cursor-default",
+                "flex h-10 min-w-36 items-center justify-between gap-3 rounded-md border border-bordersoft pr-1 pl-3.5  text-base bg-cardcontainer  select-none hover:bg-background appearance-none outline-none cursor-default",
                 {
-                  "ring-2 ring-error ring-offset-0": fieldError,
+                  "ring-2 ring-error ring-offset-0 ": fieldError,
+                  "focus:ring-2 focus:ring-blue-800 focus:ring-offset-0":
+                    !fieldError,
                 },
               )}
             >
@@ -61,7 +63,7 @@ export default function SelectField({
             </Select.Trigger>
             <Select.Portal>
               <Select.Positioner
-                className="outline-none select-none z-10"
+                className="outline-none text-6xl select-none z-10"
                 sideOffset={8}
               >
                 <Select.Popup className="group  origin-[var(--transform-origin)] bg-clip-padding rounded-md bg-pop  shadow-md ring-1 ring-white ring-offset-0 shadow-shadow  transition-[transform,scale,opacity] data-[ending-style]:scale-90 data-[ending-style]:opacity-0 data-[side=none]:data-[ending-style]:transition-none data-[starting-style]:scale-90 data-[starting-style]:opacity-0 data-[side=none]:data-[starting-style]:scale-100 data-[side=none]:data-[starting-style]:opacity-100 data-[side=none]:data-[starting-style]:transition-none">
