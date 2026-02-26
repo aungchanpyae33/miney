@@ -8,7 +8,7 @@ function Logo() {
         <Image
           src={"/logo.svg"}
           width={100}
-          height={47}
+          height={26.7}
           alt="logo"
           className=""
         />
