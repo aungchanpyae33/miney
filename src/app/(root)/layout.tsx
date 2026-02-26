@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Logo from "@/ui/navbar/Logo";
 import NavTopBar from "@/ui/navbar/NavTopBar";
@@ -15,8 +15,13 @@ import DeviceCheckFetcher from "@/ui/DeviceCheck/DeviceCheckFetcher";
 import UserInfoFetcher from "@/ui/UserInfoFetch/UserInfoFetcher";
 import { ThemeProvider } from "next-themes";
 
-const notoSans = Noto_Sans({
-  variable: "--font-noto-sans",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -43,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${notoSans.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
