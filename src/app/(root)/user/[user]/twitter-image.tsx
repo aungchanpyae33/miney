@@ -53,12 +53,27 @@ export default async function Image(props: {
         justifyContent: "center",
         gap: "25px",
         color: "black",
+        position: "relative",
       }}
     >
+      <span
+        style={{
+          position: "absolute",
+          top: "50px",
+          right: "200px",
+        }}
+      >
+        <img
+          src="https://miney-bubble.vercel.app/logo.svg"
+          width={130}
+          height={34.7}
+          alt="logo"
+        />
+      </span>
       {data.profile_avatar_url ? (
         <img
-          width="256"
-          height="256"
+          width="300"
+          height="300"
           src={data.profile_avatar_url}
           style={{
             borderRadius: 128,
@@ -67,8 +82,8 @@ export default async function Image(props: {
         />
       ) : (
         <svg
-          width="256"
-          height="256"
+          width="300"
+          height="300"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           fill="#52525b"
@@ -80,15 +95,6 @@ export default async function Image(props: {
           />
         </svg>
       )}
-      <div
-        style={{
-          fontSize: 40,
-          maxWidth: 900,
-          textAlign: "center",
-        }}
-      >
-        {data.text_name}
-      </div>
     </div>,
     { ...size },
   );
