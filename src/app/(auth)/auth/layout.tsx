@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ReactNode, Suspense } from "react";
 import "../../globals.css";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans, Noto_Sans_Myanmar } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import PageLoading from "@/ui/loading/PageLoading";
 import { NextIntlClientProvider } from "next-intl";
@@ -23,20 +23,21 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSans = Noto_Sans({
+  subsets: ["latin"],
   display: "swap",
-  subsets: ["latin"],
 });
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+
+const notoSansMyanmar = Noto_Sans_Myanmar({
+  subsets: ["myanmar"],
+  display: "swap",
+  weight: "400",
 });
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.className} ${geistMono.className} antialiased`}
+        className={` ${notoSans.className} ${notoSansMyanmar.className} antialiased`}
       >
         <ThemeProvider
           attribute="class"
