@@ -1,5 +1,6 @@
 import IconWrapper from "@/ui/general/IconWrapper";
 import ErrorText from "@/ui/profile/Input/ErrorText";
+import clsx from "clsx";
 import { Lock } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { get, useFormContext } from "react-hook-form";
@@ -16,10 +17,18 @@ function PasswordInput() {
   return (
     <div className=" space-y-2">
       <h4>{au("password")}</h4>
-      <div className=" flex min-h-12 gap-5 p-1 px-3 border border-bordersoft  focus-within:ring-2 focus-within:ring-blue-800 rounded-md relative">
+      <div
+        className={clsx(
+          "flex min-h-12 gap-5 overflow-hidden border border-bordersoft rounded-md relative",
+          {
+            "ring-2 ring-error ring-offset-0 ": fieldError,
+            "focus:ring-2 focus:ring-blue-800 focus:ring-offset-0": !fieldError,
+          },
+        )}
+      >
         <input
           type="password"
-          className="flex-1 block pl-10 placeholder:text-ink-400 text-base  outline-none bg-transparent"
+          className="flex-1 block pl-10 placeholder:text-ink-400 text-base appearance-none  outline-none bg-transparent"
           placeholder={au("passwordPlaceholder")}
           {...register(name, {
             required: e("required", { label: au("password") }),
