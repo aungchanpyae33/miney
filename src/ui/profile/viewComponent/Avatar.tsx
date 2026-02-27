@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function Avater({ url }: { url: string }) {
+function Avatar({ url }: { url: string }) {
   return (
     <div className="relative overflow-hidden rounded-full size-36 sm:size-40 ">
       <Image src={url} fill sizes="160px" alt="user profile picture" />
@@ -8,4 +8,4 @@ function Avater({ url }: { url: string }) {
   );
 }
 
-export default Avater;
+export default Avatar;

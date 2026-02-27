@@ -2,7 +2,6 @@ import { outputView } from "@/utils/outputForView";
 import { useTranslations } from "next-intl";
 import { Multiple_input } from "../../../database.type-fest";
 import MultipleList from "./viewComponent/MultipleList";
-import Avater from "./viewComponent/Avater";
 import { UserIcon } from "./formChild/icons";
 import Name from "./viewComponent/Name";
 import Bio from "./viewComponent/Bio";
@@ -10,6 +9,7 @@ import SingleText from "./viewComponent/SingleText";
 import Age from "./viewComponent/Age";
 import Friendliness from "./viewComponent/Friendliness";
 import { ProfileDataOutput } from "@/type/dataType";
+import Avatar from "./viewComponent/Avatar";
 function ProfileViewContent({
   profileData,
 }: {
@@ -22,7 +22,7 @@ function ProfileViewContent({
     <div className=" w-full md:p-5 p-2  py-5 space-y-10 ">
       <div className=" space-y-4 flex flex-col items-center">
         {data.profile_avatar_url ? (
-          <Avater url={data.profile_avatar_url} />
+          <Avatar url={data.profile_avatar_url} />
         ) : (
           <UserIcon className="size-36 sm:size-40 text-ink-400" />
         )}

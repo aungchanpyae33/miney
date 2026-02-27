@@ -41,7 +41,7 @@ export const upLoadImageClient = async (
     // default avatar , meaning it is changing from soemthing existing to default, so we need to delete the existing one in storage
     if (file === "default") {
       const { error: storageError } = await supabase.storage
-        .from("miney_avater")
+        .from("miney_avatar")
         .remove([`${userId}/avatar.jpeg`]);
       if (storageError) {
         return {
@@ -60,7 +60,7 @@ export const upLoadImageClient = async (
     const filePath = `${userId}/${file.name}`;
 
     const { error } = await supabase.storage
-      .from("miney_avater")
+      .from("miney_avatar")
       .upload(filePath, file, {
         contentType: file.type,
         cacheControl: "3600",
@@ -77,7 +77,7 @@ export const upLoadImageClient = async (
 
     // get public URL
     const { data } = supabase.storage
-      .from("miney_avater")
+      .from("miney_avatar")
       .getPublicUrl(filePath);
 
     return {

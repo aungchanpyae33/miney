@@ -36,7 +36,7 @@ export const deleteUserAccount = async () => {
     const avatarUrl = data?.profile_avatar_url;
     if (avatarUrl) {
       const { error: storageError } = await supabase.storage
-        .from("miney_avater")
+        .from("miney_avatar")
         .remove([`${user.sub}/avatar.jpeg`]);
       if (storageError) {
         return {
