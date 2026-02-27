@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "rfcljrclrwcmogxmejxm.supabase.co",
         port: "",
-        pathname: "/storage/v1/object/public/miney_avater/**",
+        pathname: "/storage/v1/object/public/miney_avatar/**",
       },
     ],
   },
