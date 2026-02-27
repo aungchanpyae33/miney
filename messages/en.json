@@ -139,6 +139,8 @@
     "noMBTI": "no MBTI fount",
     "maxLength": "Max length is {max} characters",
     "minLength": "Max length is {min} characters",
+    "minLengthPassword": "Password must be at least {min} characters",
+    "passwordComplexity": "Password must include uppercase, lowercase, number, symbol and at least {min} characters",
     "onlyNumbers": "Only  English numbers are allowed",
     "invalidYear": "Please enter the correct year of birth",
     "outOfRangeYear": "Please enter a year between 1900 and {currentYear}",

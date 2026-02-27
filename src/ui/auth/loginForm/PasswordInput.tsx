@@ -5,7 +5,7 @@ import { Lock } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { get, useFormContext } from "react-hook-form";
 const name = "password";
-
+const minLengthPassword = 6;
 function PasswordInput() {
   const {
     register,
@@ -32,6 +32,15 @@ function PasswordInput() {
           placeholder={au("passwordPlaceholder")}
           {...register(name, {
             required: e("required", { label: au("password") }),
+            minLength: {
+              value: minLengthPassword,
+              message: e("minLengthPassword", { min: minLengthPassword }),
+            },
+            // Lowercase, uppercase letters, digits and symbols )
+            pattern: {
+              value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$/,
+              message: e("passwordComplexity", { min: minLengthPassword }),
+            },
           })}
         />
         <span className=" absolute left-2 h-full top-0 flex items-center">

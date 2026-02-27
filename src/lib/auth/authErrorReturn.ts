@@ -20,6 +20,9 @@ export function authErrorReturn(authError: AuthApiError): string {
     case "user_not_found":
       return "notFoundUser";
 
+    case "weak_password":
+      return "passwordComplexity";
+
     default:
       return "wentWrong";
   }
