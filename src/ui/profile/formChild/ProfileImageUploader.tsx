@@ -174,7 +174,7 @@ const ProfileImageUploader = ({ url }: { url: string }) => {
                       className="object-cover"
                     />
                   ) : (
-                    <UserIcon className="w-24 h-24 text-ink-400" />
+                    <UserIcon className=" size-28 rounded-full text-ink-400" />
                   )}
                 </div>
               )}
