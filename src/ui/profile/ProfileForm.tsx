@@ -185,7 +185,7 @@ export default function ProfileForm() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="rounded-3xl relative w-full md:p-5 p-2  py-5 shadow-[_3px_-3px_#D3DAD9] bg-cardcontainer"
+      className="rounded-3xl relative w-full md:px-5 p-2   shadow-[_3px_-3px_var(--semicontainer)] bg-cardcontainer"
     >
       <FormProvider {...methods}>
         <form
