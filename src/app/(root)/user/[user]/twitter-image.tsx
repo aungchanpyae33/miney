@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { getUserDynamicProfileCache } from "@/database/serverCacheData";
 import { ImageResponse } from "next/og";
-
+export const runtime = "edge";
 // Image metadata
 export const size = {
   width: 1200,
