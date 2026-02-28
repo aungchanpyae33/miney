@@ -80,6 +80,27 @@
     "text_name": {
       "label": "နမည်"
     },
+    "updated_at": {
+      "ago": "လွန်ခဲ့သော",
+
+      "seconds": "{ago} {number} စက္ကန့်",
+      "second": "{ago} {number} စက္ကန့်",
+
+      "minutes": "{ago} {number} မိနစ်",
+      "minute": "{ago} {number} မိနစ်",
+
+      "hours": "{ago} {number} နာရီ",
+      "hour": "{ago} {number} နာရီ",
+
+      "days": "{ago} {number} ရက်",
+      "day": "{ago} {number} ရက်",
+
+      "months": "{ago} {number} လ",
+      "month": "{ago} {number} လ",
+
+      "years": "{ago} {number} နှစ်",
+      "year": "{ago} {number} နှစ်"
+    },
     "text_textarea_bio": {
       "label": "ဖော်ပြချက်"
     },

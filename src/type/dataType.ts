@@ -3,6 +3,7 @@ import type { Multiple_input, Tables } from "../../database.type-fest";
 
 export interface ProfileDataOutput {
   id: string;
+  updated_at: string;
   profile_avatar_url: string;
   text_date_birth: string;
   text_name: string;

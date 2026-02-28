@@ -25,6 +25,7 @@ import type { ProfileDataOutput } from "@/type/dataType";
 
 export const defaultProfile = {
   id: "",
+  updated_at: "",
   profile_avatar_url: "",
   text_name: "",
   text_select_gender: "",

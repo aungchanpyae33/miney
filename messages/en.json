@@ -80,6 +80,27 @@
     "text_name": {
       "label": "Name"
     },
+    "updated_at": {
+      "ago": "ago",
+
+      "seconds": "{number} seconds {ago}",
+      "second": "{number} second {ago}",
+
+      "minutes": "{number} minutes {ago}",
+      "minute": "{number} minute {ago}",
+
+      "hours": "{number} hours {ago}",
+      "hour": "{number} hour {ago}",
+
+      "days": "{number} days {ago}",
+      "day": "{number} day {ago}",
+
+      "months": "{number} months {ago}",
+      "month": "{number} month {ago}",
+
+      "years": "{number} years {ago}",
+      "year": "{number} year {ago}"
+    },
     "text_textarea_bio": {
       "label": "Bio"
     },

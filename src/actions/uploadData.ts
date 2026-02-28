@@ -63,6 +63,7 @@ export const uploadData = async (
             Record<string, unknown>)
           .select(
             `id,
+            updated_at,
             profile_avatar_url,
             text_name,
             text_select_gender,
@@ -90,6 +91,7 @@ export const uploadData = async (
         .select(
           `
           id,
+          updated_at,
           profile_avatar_url,
           text_name,
           text_select_gender,

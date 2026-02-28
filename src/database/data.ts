@@ -19,6 +19,7 @@ export const getUserProfile = async (): Promise<UserProfile> => {
       .from("profile")
       .select(
         `id,
+        updated_at,
         profile_avatar_url,
         text_name,
         text_select_gender,
@@ -53,6 +54,7 @@ export const getUserDynamicProfile = async (
       .from("profile")
       .select(
         `id,
+        updated_at,
         profile_avatar_url,
         text_name,
         text_select_gender,
