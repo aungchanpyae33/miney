@@ -24,7 +24,7 @@ function NeedToSignIn() {
         <p className="text-sm font-light">
           {au.rich("noAcc", {
             link: (chunks) => (
-              <Link href="auth/sign-up" className=" underline">
+              <Link href="/auth/sign-up" className=" underline">
                 {chunks}
               </Link>
             ),
