@@ -1,3 +1,4 @@
+import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import ContextTextBoxLoading from "@/ui/loading/ContextTextBoxLoading";
 import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
@@ -8,10 +9,11 @@ export async function generateMetadata() {
   return {
     title: meta("privacyPage.title"),
     description: meta("privacyPage.description"),
+    metadataBase: outputBaseUrl(),
     openGraph: {
       title: meta("privacyPage.title"),
       description: meta("privacyPage.description"),
-      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/privacy`,
+      url: "/privacy",
       type: "website",
       siteName: "Miney",
     },

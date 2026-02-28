@@ -1,3 +1,4 @@
+import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import ProfileLoading from "@/ui/loading/ProfileLoading";
 import DivideSection from "@/ui/profile/DivideSection";
 import { getTranslations } from "next-intl/server";
@@ -8,12 +9,14 @@ export async function generateMetadata() {
   return {
     title: meta("default.title"),
     description: meta("default.description"),
-    metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
-
+    metadataBase: outputBaseUrl(),
+    alternates: {
+      canonical: "/",
+    },
     openGraph: {
       title: meta("default.title"),
       description: meta("default.description"),
-      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
+      url: "/",
       type: "website",
       siteName: "Miney",
     },

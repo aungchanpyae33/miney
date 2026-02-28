@@ -1,4 +1,5 @@
 import { getUserDynamicProfileCache } from "@/database/serverCacheData";
+import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import DynamicViewProfile from "@/ui/DynamicViewProfile/DynamicViewProfile";
 import ProfileLoading from "@/ui/loading/ProfileLoading";
 import { getTranslations } from "next-intl/server";
@@ -14,12 +15,12 @@ export async function generateMetadata(props: {
     return {
       title: meta("userPage.notFoundTitle"),
       description: meta("userPage.notFoundDescription"),
-      metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
+      metadataBase: outputBaseUrl(),
 
       openGraph: {
         title: meta("userPage.notFoundTitle"),
         description: meta("userPage.notFoundDescription"),
-        url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/user/${user}`,
+        url: `/user/${user}`,
         type: "profile",
         siteName: "Miney",
       },
@@ -29,12 +30,12 @@ export async function generateMetadata(props: {
   return {
     title: userName,
     description: meta("userPage.description"),
-    metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
+    metadataBase: outputBaseUrl(),
 
     openGraph: {
       title: userName,
       description: meta("userPage.description"),
-      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/user/${user}`,
+      url: `/user/${user}`,
       type: "profile",
       siteName: "Miney",
     },
