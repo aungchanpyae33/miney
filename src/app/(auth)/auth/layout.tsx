@@ -10,7 +10,7 @@ import GeneralSettingOption from "@/ui/navbar/GeneralSettingOption";
 import DeviceCheckFetcher from "@/ui/DeviceCheck/DeviceCheckFetcher";
 export const metadata: Metadata = {
   title: {
-    template: "%s - Miney",
+    template: "%s | Miney",
     default: "Miney",
   },
   icons: {

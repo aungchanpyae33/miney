@@ -28,7 +28,7 @@ const notoSansMyanmar = Noto_Sans_Myanmar({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Miney",
+    template: "%s | Miney",
     default: "Miney",
   },
   icons: {
