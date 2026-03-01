@@ -51,6 +51,19 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA "extensions";
 
 
 
+
+CREATE OR REPLACE FUNCTION "public"."update_updated_at_column"() RETURNS "trigger"
+    LANGUAGE "plpgsql"
+    AS $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+
+
+ALTER FUNCTION "public"."update_updated_at_column"() OWNER TO "postgres";
+
 SET default_tablespace = '';
 
 SET default_table_access_method = "heap";
@@ -73,7 +86,8 @@ CREATE TABLE IF NOT EXISTS "public"."profile" (
     "text_textarea_bio" "text",
     "multiple_own_comfort_zone" "jsonb",
     "user_id" "uuid" NOT NULL,
-    "text_select_relationship" "text"
+    "text_select_relationship" "text",
+    "updated_at" timestamp with time zone DEFAULT "now"() NOT NULL
 );
 
 
@@ -87,6 +101,10 @@ ALTER TABLE ONLY "public"."profile"
 
 ALTER TABLE ONLY "public"."profile"
     ADD CONSTRAINT "profile_user_id_key" UNIQUE ("user_id");
+
+
+
+CREATE OR REPLACE TRIGGER "update_profile_updated_at" BEFORE UPDATE ON "public"."profile" FOR EACH ROW EXECUTE FUNCTION "public"."update_updated_at_column"();
 
 
 
@@ -273,6 +291,12 @@ GRANT USAGE ON SCHEMA "public" TO "service_role";
 
 
 
+
+
+
+GRANT ALL ON FUNCTION "public"."update_updated_at_column"() TO "anon";
+GRANT ALL ON FUNCTION "public"."update_updated_at_column"() TO "authenticated";
+GRANT ALL ON FUNCTION "public"."update_updated_at_column"() TO "service_role";
 
 
 
