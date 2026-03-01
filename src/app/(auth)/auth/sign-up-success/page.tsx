@@ -1,0 +1,33 @@
+import AuthContainer from "@/ui/auth/AuthContainer";
+import BrandTitle from "@/ui/auth/BrandTitle";
+import SignUpInstruction from "@/ui/auth/signupScuuess/SignUpInstruction";
+import SignUpSuccessTitle from "@/ui/auth/signupScuuess/SignUpSuccessTitle";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata() {
+  const meta = await getTranslations("MetaData");
+
+  return {
+    title: meta("authConfirm.title"),
+    description: meta("authConfirm.description"),
+    metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
+
+    openGraph: {
+      title: meta("authConfirm.title"),
+      description: meta("authConfirm.description"),
+      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/auth/sign-up-success`,
+      type: "website",
+      siteName: "Miney",
+    },
+  };
+}
+
+export default function Page() {
+  return (
+    <AuthContainer>
+      <BrandTitle />
+      <SignUpSuccessTitle />
+      <SignUpInstruction />
+    </AuthContainer>
+  );
+}
