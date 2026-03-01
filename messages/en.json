@@ -181,7 +181,8 @@
     "deleteProfileWarning": "By clicking Delete, your profile will be permanently removed. This action cannot be undone.",
     "deleteUserWarning": "By clicking Delete, your account will be permanently removed. This action cannot be undone.",
     "needToLogin": "Sign In Required",
-    "NotFound": "Not Found"
+    "NotFound": "Not Found",
+    "globalNotFound": "We can't find the page you're looking for. Please try searching for something else"
   },
   "NotiMsg": {
     "editSuccess": "Your profile data is successfully updated",
@@ -189,6 +190,7 @@
     "deleteUserSuccess": "Your account is successfully deleted"
   },
   "block": {
+    "home": "Home",
     "noti": "Notice",
     "cancel": "Cancel",
     "confirm": "Confirm",
