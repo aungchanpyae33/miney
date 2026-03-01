@@ -1,7 +1,7 @@
 # Miney (မိုင်နီ) <img src="https://miney-bubble.vercel.app/logo.svg" width=100 height=26.7  />
 
 <p>
-<img  src="https://img.shields.io/badge/version-v1.0.0-3B82F6">
+<img src="https://img.shields.io/github/v/release/aungchanpyae33/miney?cache=0">
 <img  src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
