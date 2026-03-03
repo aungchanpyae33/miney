@@ -1,11 +1,12 @@
+"use cache";
+import { cacheLife } from "next/cache";
 import { createClientWithoutCookies } from "@/database/serverWithoutCookie";
 import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import type { MetadataRoute } from "next";
 
-export const revalidate = 86400; // Re-cache every 24 hours
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  cacheLife("days");
   const baseUrl = outputBaseUrl().toString();
-
   try {
     const supabase = createClientWithoutCookies();
 
@@ -20,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return profiles.map((profile) => ({
       url: `${baseUrl}/user/${profile.id}`,
-      lastModified: profile.updated_at,
+      lastModified: new Date(profile.updated_at),
       changeFrequency: "weekly",
       priority: 0.8,
       images: profile.profile_avatar_url

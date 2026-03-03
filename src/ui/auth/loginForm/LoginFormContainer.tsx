@@ -4,7 +4,6 @@ import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
 import SubmitButton from "./SubmitButton";
 import { supabase } from "@/database/supabaseClient";
-import { useRouter } from "nextjs-toploader/app";
 import { useTopLoader } from "nextjs-toploader";
 import RootErrorText from "./RootErrorText";
 import { isAuthApiError } from "@supabase/supabase-js";
@@ -16,7 +15,6 @@ type LoginValues = {
   password: string;
 };
 function LoginFormContainer() {
-  const router = useRouter();
   const loader = useTopLoader();
   const [isNavigating, setIsNavigating] = useNaviSet();
   const e = useTranslations("ErrorMsg");
@@ -30,7 +28,7 @@ function LoginFormContainer() {
       });
       if (error) throw error;
       setIsNavigating(true);
-      router.push("/");
+      window.location.href = "/";
     } catch (error: unknown) {
       if (isAuthApiError(error) && error.code) {
         const message = authErrorReturn(error);
