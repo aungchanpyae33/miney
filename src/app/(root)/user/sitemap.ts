@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return profiles.map((profile) => ({
       url: `${baseUrl}/user/${profile.id}`,
-      lastModified: profile.updated_at,
+      lastModified: new Date(profile.updated_at),
       changeFrequency: "weekly",
       priority: 0.8,
       images: profile.profile_avatar_url
