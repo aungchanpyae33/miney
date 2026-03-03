@@ -1,7 +1,9 @@
-import { getTranslations } from "next-intl/server";
-
-async function NotFoundText() {
-  const w = await getTranslations("WarningMsg");
+import { _Translator } from "next-intl";
+type Props = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  w: _Translator<Record<string, any>, "WarningMsg">;
+};
+async function NotFoundText({ w }: { w: Props["w"] }) {
   return <div className=" text-center max-w-80">{w("globalNotFound")}</div>;
 }
 
