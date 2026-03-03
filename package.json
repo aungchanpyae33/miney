@@ -26,7 +26,6 @@
     "react-dom": "19.2.4",
     "react-easy-crop": "^5.5.3",
     "react-hook-form": "^7.71.1",
-    "root": "git+https://github.com/tanstack/react-query.git",
     "tailwind-merge": "3.1.0",
     "type-fest": "^5.2.0",
     "ua-parser-js": "2.0.2",
