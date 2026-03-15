@@ -27,7 +27,7 @@ function ProfileDelete() {
           <AlertDialog.Title className="-mt-1.5 mb-3 text-lg font-medium">
             {b("noti")}
           </AlertDialog.Title>
-          <AlertDialog.Description className="mb-6 text-base leading-relaxed break-all ">
+          <AlertDialog.Description className="mb-6 text-base break-all ">
             {w("deleteProfileWarning")}
           </AlertDialog.Description>
           <div className="flex justify-end gap-4">
