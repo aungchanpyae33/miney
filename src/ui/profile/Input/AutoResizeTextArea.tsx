@@ -214,7 +214,7 @@ export default function AutoResizeTextArea({
             <Dialog.Title className="-mt-1.5 mb-1 text-lg font-medium">
               {b("noti")}
             </Dialog.Title>
-            <Dialog.Description className="mb-6 text-base leading-relaxed break-all  ">
+            <Dialog.Description className="mb-6 text-base break-all  ">
               {t("3isMax")}
             </Dialog.Description>
             <div className="flex justify-end gap-4">

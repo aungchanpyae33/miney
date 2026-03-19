@@ -10,9 +10,7 @@ async function Footer() {
       <div className="grid  px-5 grid-cols-1 gap-8">
         <div className="space-y-4 sm:col-span-2 lg:col-auto col-auto">
           <h3 className="font-bold text-lg">{b("noti")}</h3>
-          <p className="text-ink-400 text-sm leading-relaxed">
-            {b("footerNoti")}
-          </p>
+          <p className="text-ink-400 text-sm">{b("footerNoti")}</p>
         </div>
 
         <div className="space-y-4">
@@ -47,7 +45,7 @@ async function Footer() {
 
         <div className="space-y-4">
           <h3 className="font-bold text-lg">{b("contact")}</h3>
-          <p className="text-ink-400 text-sm leading-relaxed"></p>
+          <p className="text-ink-400 text-sm"></p>
           <div className="flex flex-col space-y-3">
             <Link
               target="_"
