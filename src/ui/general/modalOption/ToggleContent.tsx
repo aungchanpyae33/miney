@@ -45,7 +45,11 @@ function ToggleContentFloat({
   useCloseFunctoion(show, setShow, parentRef);
 
   return (
-    <FocusTrap>
+    <FocusTrap
+      focusTrapOptions={{
+        allowOutsideClick: true,
+      }}
+    >
       <div
         className={clsx(
           " fixed z-50 overflow-auto max-w-full  bg-pop max-h-full border border-bordersoft left-0 top-0 p-1 rounded-md",
@@ -110,7 +114,11 @@ function ToggleContentMobile({
 
   return (
     <div ref={scope} className="z-50">
-      <FocusTrap>
+      <FocusTrap
+        focusTrapOptions={{
+          allowOutsideClick: true,
+        }}
+      >
         <motion.div
           onClick={(e) => {
             if (e.target === e.currentTarget) return;
