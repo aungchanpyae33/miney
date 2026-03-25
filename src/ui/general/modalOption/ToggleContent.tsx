@@ -114,63 +114,66 @@ function ToggleContentMobile({
 
   return (
     <div ref={scope} className="z-50">
-      <FocusTrap
-        focusTrapOptions={{
-          allowOutsideClick: true,
+      <motion.div
+        onClick={(e) => {
+          if (e.target === e.currentTarget) return;
+          onCloseAnimation();
+        }}
+        id="drawer"
+        initial={{ y: "100%" }}
+        animate={{ y: "0%" }}
+        transition={{
+          ease: "easeInOut",
+        }}
+        className={clsx(
+          " fixed z-10 p-2 bottom-5 left-2 right-2 overflow-hidden rounded-md bg-pop",
+          {
+            hidden: uuidState !== "",
+          },
+        )}
+        style={{ y }}
+        drag="y"
+        dragControls={controls}
+        onDragEnd={(_, info) => {
+          if (info.offset.y > 60) {
+            onCloseAnimation();
+          }
+        }}
+        dragListener={false}
+        dragConstraints={{
+          top: 0,
+          bottom: 0,
+        }}
+        ref={containerRef}
+        tabIndex={-1}
+        dragElastic={{
+          top: 0,
+          bottom: 0.5,
         }}
       >
-        <motion.div
-          onClick={(e) => {
-            if (e.target === e.currentTarget) return;
-            onCloseAnimation();
-          }}
-          id="drawer"
-          initial={{ y: "100%" }}
-          animate={{ y: "0%" }}
-          transition={{
-            ease: "easeInOut",
-          }}
-          className={clsx(
-            " fixed z-10 p-2 bottom-5 left-2 right-2 overflow-hidden rounded-md bg-pop",
-            {
-              hidden: uuidState !== "",
-            },
-          )}
-          style={{ y }}
-          drag="y"
-          dragControls={controls}
-          onDragEnd={(_, info) => {
-            if (info.offset.y > 60) {
-              onCloseAnimation();
-            }
-          }}
-          dragListener={false}
-          dragConstraints={{
-            top: 0,
-            bottom: 0,
-          }}
-          ref={containerRef}
-          tabIndex={-1}
-          dragElastic={{
-            top: 0,
-            bottom: 0.5,
+        <FocusTrap
+          active={uuidState === ""}
+          focusTrapOptions={{
+            allowOutsideClick: true,
           }}
         >
-          <TipUi controls={controls} />
-          <div className="w-full">{children}</div>
-        </motion.div>
-        <motion.div
-          id="backDrop"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ ease: "easeInOut" }}
-          onClick={onCloseAnimation}
-          aria-hidden
-          className={clsx("fixed  top-0 left-0 bottom-0 right-0 bg-backdrop", {
-            hidden: uuidState !== "",
-          })}
-        ></motion.div>
-      </FocusTrap>
+          <div className="w-full h-full" tabIndex={0}>
+            <TipUi controls={controls} />
+            <div className="w-full">{children}</div>
+          </div>
+        </FocusTrap>
+      </motion.div>
+      <motion.div
+        id="backDrop"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeInOut" }}
+        onClick={onCloseAnimation}
+        aria-hidden
+        className={clsx("fixed  top-0 left-0 bottom-0 right-0 bg-backdrop", {
+          hidden: uuidState !== "",
+        })}
+      ></motion.div>
     </div>
   );
 }
