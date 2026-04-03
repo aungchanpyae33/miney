@@ -10,7 +10,7 @@ import ProfileDeleteButton from "./ProfileDeleteButton";
 function ProfileRightSection() {
   const { userInfo } = useUserInfoContext();
   const user_id = returnUserId(userInfo);
-  const { data: queryData } = useQuery({
+  const { data: queryData, error: queryError } = useQuery({
     queryKey: ["user-profile", user_id],
     queryFn: () => getUserProfileClient(),
     enabled: !!user_id,
@@ -23,7 +23,10 @@ function ProfileRightSection() {
     data: null,
     error: "something went wrong",
   };
-  if (!profileData || error || status !== 200) return;
+  if (queryError || (status !== 200 && status !== 401 && user_id) || error) {
+    throw new Error("page-load-error");
+  }
+  if (!profileData || status !== 200) return;
   if (profileData.id.length === 0) return;
   return (
     <>
