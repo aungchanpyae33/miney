@@ -170,14 +170,13 @@ export default function ProfileForm() {
     },
   });
 
-  if (queryError || (status !== 200 && status !== 401 && user_id)) {
-    return null;
+  if (queryError || (status !== 200 && status !== 401)) {
+    throw new Error("page-load-error");
   }
   const handleAction = async (data: FormDataType) => {
     const cleanedProfile = removeUnusedFields(data);
     mutation.mutate(cleanedProfile);
   };
-  if (queryError) return null;
   if (isFetching) return <ProfileLoading />;
 
   return (
