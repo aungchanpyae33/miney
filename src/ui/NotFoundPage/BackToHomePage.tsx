@@ -14,7 +14,10 @@ async function BackToHomePage({
   return (
     <a href={"/"} className="  flex gap-5 ">
       {children}
-      <span className="bg-zonecontainer rounded-lg p-2"> {b("home")}</span>
+      <span className="bg-semicontainer text-pop rounded-lg p-2">
+        {" "}
+        {b("home")}
+      </span>
     </a>
   );
 }
