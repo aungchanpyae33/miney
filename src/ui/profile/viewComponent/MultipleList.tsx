@@ -13,9 +13,7 @@ function MultipleList({
       <div className="w-fit flex flex-wrap gap-1   break-all ">
         {items.map((item) => (
           <div key={item.id} className="p-[2px] rounded-lg bg-semicontainer ">
-            <div className="bg-zonecontainer  leading-relaxed p-2 rounded-lg">
-              {item.name}
-            </div>
+            <div className="bg-zonecontainer p-2 rounded-lg">{item.name}</div>
           </div>
         ))}
       </div>
