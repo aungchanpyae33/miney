@@ -18,18 +18,16 @@ function ProfileViewWrapper() {
     enabled: !!user_id,
   });
 
-  const {
-    data: profileData,
-    error,
-    status,
-  } = queryData || {
+  const { data: profileData, status } = queryData || {
     data: null,
     error: "something went wrong",
   };
 
   if (isFetching) return <ProfileLoading />;
-  if (!profileData || error || status !== 200 || queryError)
-    return <EmptyData />;
+  if (queryError || (status !== 200 && status !== 401)) {
+    throw new Error("page-load-error");
+  }
+  if (!profileData || status !== 200) return <EmptyData />;
   return <ProfileViewContent profileData={profileData} />;
 }
 
