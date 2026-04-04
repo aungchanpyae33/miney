@@ -12,14 +12,12 @@ import {
 import { useToggleContentPosition } from "@/lib/CustomHooks/useToggleContentPosition";
 import useOutterClickSub from "@/lib/CustomHooks/useOutterClickSub";
 import TipUi from "../TipUi";
-import FocusTrap from "../FocusTrap";
 import useCloseFunctoionStack from "@/lib/CustomHooks/useCloseFunctionStack";
 import { ContextMoreOption } from "./MoreOptionContext";
 import { ContextMoreOptionStack } from "./MoreOptionStackContext";
 import { ContextMoreOptionUnique } from "./MoreOptionUniqueContext";
 import useFocusOnOpen from "@/lib/CustomHooks/useFocusOpen";
 import { useEnableScroll } from "@/lib/CustomHooks/useEableScroll";
-import { ContextDevice } from "@/ui/DeviceCheck/DeviceCheckContext";
 
 interface ToggleSubContentMobileProps extends React.ComponentProps<"div"> {
   children: React.ReactNode;
