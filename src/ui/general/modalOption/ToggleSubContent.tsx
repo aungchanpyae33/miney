@@ -8,13 +8,18 @@ import {
   useDragControls,
   useMotionValue,
 } from "motion/react";
+
+import { useToggleContentPosition } from "@/lib/CustomHooks/useToggleContentPosition";
+import useOutterClickSub from "@/lib/CustomHooks/useOutterClickSub";
 import TipUi from "../TipUi";
+import FocusTrap from "../FocusTrap";
+import useCloseFunctoionStack from "@/lib/CustomHooks/useCloseFunctionStack";
 import { ContextMoreOption } from "./MoreOptionContext";
 import { ContextMoreOptionStack } from "./MoreOptionStackContext";
 import { ContextMoreOptionUnique } from "./MoreOptionUniqueContext";
 import useFocusOnOpen from "@/lib/CustomHooks/useFocusOpen";
-import { useToggleContentPosition } from "@/lib/CustomHooks/useToggleContentPosition";
-import useOutterClickSub from "@/lib/CustomHooks/useOutterClickSub";
+import { useEnableScroll } from "@/lib/CustomHooks/useEableScroll";
+import { ContextDevice } from "@/ui/DeviceCheck/DeviceCheckContext";
 
 interface ToggleSubContentMobileProps extends React.ComponentProps<"div"> {
   children: React.ReactNode;
@@ -30,13 +35,14 @@ function ToggleSubContentMobile({
   stayShow,
 }: ToggleSubContentMobileProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const controls = useDragControls();
   const [scope, animate] = useAnimate();
   const y = useMotionValue(0);
   const { setShow } = useContext(ContextMoreOption);
   const { setStack, stack } = useContext(ContextMoreOptionStack);
-
+  const controls = useDragControls();
   const { uuidState } = useContext(ContextMoreOptionUnique);
+
+  // the reason i am not reseting setUuidState is to avoaid showing hidden class in toggleContent parent
 
   function onCloseAnimation() {
     const yStart = typeof y.get() === "number" ? y.get() : 0;
@@ -61,6 +67,8 @@ function ToggleSubContentMobile({
       setShow(false);
     });
   }
+
+  useCloseFunctoionStack(stayShow, containerRef);
   useFocusOnOpen(stayShow, containerRef);
   return (
     <div ref={scope} className="z-50">
@@ -139,8 +147,10 @@ function ToggleSubContentFloat({
     parentRef,
     containerRef,
   });
+  useEnableScroll(containerRef);
   // outterclickSub is to detect only click is inside portal and targert parent trigger
   useOutterClickSub(containerRef, stackNum);
+  useCloseFunctoionStack(stayShow, containerRef);
   useFocusOnOpen(stayShow, containerRef);
   return (
     <FocusTrap
@@ -150,7 +160,7 @@ function ToggleSubContentFloat({
     >
       <div
         className={clsx(
-          " fixed  z-30 max-w-full bg-pop   overflow-auto max-h-full   border-opacity-25 border border-bordersoft left-0 top-0 p-1 rounded-md",
+          " fixed  z-50 max-w-full bg-pop   overflow-auto max-h-full   border-opacity-25 border border-borderFull left-0 top-0 p-1 rounded-md",
         )}
         ref={containerRef}
         style={position}

@@ -1,19 +1,17 @@
 import { RefObject, useContext, useRef } from "react";
 import clsx from "clsx";
-import { ContextMoreOption } from "./MoreOptionContext";
-import { ContextMoreOptionStack } from "./MoreOptionStackContext";
 import {
   motion,
   useAnimate,
   useDragControls,
   useMotionValue,
 } from "motion/react";
-import { ContextMoreOptionUnique } from "./MoreOptionUniqueContext";
 import { useToggleContentPosition } from "@/lib/CustomHooks/useToggleContentPosition";
 import useOutterClick from "@/lib/CustomHooks/useOutterClick";
 import useCloseFunctoion from "@/lib/CustomHooks/useCloseFunction";
 import useFocusOnOpen from "@/lib/CustomHooks/useFocusOpen";
-import TipUi from "../TipUi";
+import { useEnableScroll } from "@/lib/CustomHooks/useEableScroll";
+import { ContextMoreOptionUnique } from "./MoreOptionUniqueContext";
 import { ContextDevice } from "@/ui/DeviceCheck/DeviceCheckContext";
 import { FocusTrap } from "focus-trap-react";
 interface ToggleContentProps extends React.ComponentProps<"div"> {
@@ -40,10 +38,10 @@ function ToggleContentFloat({
     staticUp,
   });
   // outterclick is to detect click is inside portal and targert parent trigger or not inside when portal is open
+  useEnableScroll(containerRef);
   useOutterClick(show, setShow, containerRef, parentRef);
+  useCloseFunctoion(show, () => setShow(false), containerRef);
   useFocusOnOpen(stack === 0, containerRef);
-  useCloseFunctoion(show, setShow, parentRef);
-
   return (
     <FocusTrap
       focusTrapOptions={{
@@ -52,7 +50,7 @@ function ToggleContentFloat({
     >
       <div
         className={clsx(
-          " fixed z-50 overflow-auto max-w-full  bg-pop max-h-full border border-bordersoft left-0 top-0 p-1 rounded-md",
+          " fixed z-50 overflow-auto max-w-full  bg-pop max-h-full border border-borderFull left-0 top-0 p-1 rounded-md",
         )}
         ref={containerRef}
         tabIndex={-1}
@@ -69,10 +67,8 @@ const bottom = 20;
 // to sastify the bottom-5 in close
 
 function ToggleContentMobile({
-  parentRef,
   children,
 }: {
-  parentRef: ToggleContentProps["parentRef"];
   children: ToggleContentProps["children"];
 }) {
   const [scope, animate] = useAnimate();
@@ -109,9 +105,8 @@ function ToggleContentMobile({
     });
   }
 
+  useCloseFunctoion(show, () => setShow(false), containerRef);
   useFocusOnOpen(stack === 0, containerRef);
-  useCloseFunctoion(show, setShow, parentRef);
-
   return (
     <div ref={scope} className="z-50">
       <motion.div
@@ -195,7 +190,7 @@ function ToggleContent({
       {children}
     </ToggleContentFloat>
   ) : (
-    <ToggleContentMobile parentRef={parentRef}>{children}</ToggleContentMobile>
+    <ToggleContentMobile>{children}</ToggleContentMobile>
   );
 }
 
