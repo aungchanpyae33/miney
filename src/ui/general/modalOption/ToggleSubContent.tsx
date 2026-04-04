@@ -1,6 +1,7 @@
 import { RefObject, useContext, useRef } from "react";
 import clsx from "clsx";
-
+import { FocusTrap } from "focus-trap-react";
+import { ContextDevice } from "@/ui/DeviceCheck/DeviceCheckContext";
 import {
   motion,
   useAnimate,
@@ -71,60 +72,66 @@ function ToggleSubContentMobile({
   useFocusOnOpen(stayShow, containerRef);
   return (
     <div ref={scope} className="z-50">
-      <FocusTrap refFocus={containerRef}>
-        <motion.div
-          onClick={(e) => {
-            if (e.target === e.currentTarget) return;
+      <motion.div
+        onClick={(e) => {
+          if (e.target === e.currentTarget) return;
+          onCloseAnimation();
+        }}
+        id="drawer"
+        initial={{ y: "100%" }}
+        animate={{ y: "0%" }}
+        transition={{
+          ease: "easeInOut",
+        }}
+        className={clsx(
+          " fixed z-10 p-2   bottom-5 left-2 right-2 overflow-hidden rounded-md bg-pop",
+          {
+            hidden: stackNum !== stack && uuidState !== "",
+          },
+        )}
+        style={{ y }}
+        drag="y"
+        dragControls={controls}
+        onDragEnd={(_, info) => {
+          if (info.offset.y > 60) {
             onCloseAnimation();
-          }}
-          id="drawer"
-          initial={{ y: "100%" }}
-          animate={{ y: "0%" }}
-          transition={{
-            ease: "easeInOut",
-          }}
-          className={clsx(
-            " fixed z-50  bottom-5 p-2 overflow-hidden rounded-md left-2 right-2 bg-pop",
-            {
-              hidden: stackNum !== stack && uuidState !== "",
-            },
-          )}
-          style={{ y }}
-          drag="y"
-          dragControls={controls}
-          onDragEnd={(_, info) => {
-            if (info.offset.y > 60) {
-              onCloseAnimation();
-            }
-          }}
-          dragListener={false}
-          dragConstraints={{
-            top: 0,
-            bottom: 0,
-          }}
-          ref={containerRef}
-          tabIndex={-1}
-          dragElastic={{
-            top: 0,
-            bottom: 0.5,
+          }
+        }}
+        dragListener={false}
+        dragConstraints={{
+          top: 0,
+          bottom: 0,
+        }}
+        ref={containerRef}
+        tabIndex={-1}
+        dragElastic={{
+          top: 0,
+          bottom: 0.5,
+        }}
+      >
+        <FocusTrap
+          active={stackNum === stack && uuidState === ""}
+          focusTrapOptions={{
+            allowOutsideClick: true,
           }}
         >
-          <TipUi controls={controls} />
-
-          <div className="min-w-[200px]">{children}</div>
-        </motion.div>
-        <motion.div
-          id="backDrop"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ ease: "easeInOut" }}
-          onClick={onCloseAnimation}
-          aria-hidden
-          className={clsx("fixed  top-0 left-0 bottom-0 right-0 bg-overlay", {
-            hidden: stackNum !== stack && uuidState !== "",
-          })}
-        ></motion.div>
-      </FocusTrap>
+          <div className="w-full h-full" tabIndex={0}>
+            <TipUi controls={controls} />
+            <div className="w-full">{children}</div>
+          </div>
+        </FocusTrap>
+      </motion.div>
+      <motion.div
+        id="backDrop"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeInOut" }}
+        onClick={onCloseAnimation}
+        aria-hidden
+        className={clsx("fixed  top-0 left-0 bottom-0 right-0 bg-backdrop", {
+          hidden: stackNum !== stack && uuidState !== "",
+        })}
+      ></motion.div>
     </div>
   );
 }
@@ -146,7 +153,11 @@ function ToggleSubContentFloat({
   useCloseFunctoionStack(stayShow, containerRef);
   useFocusOnOpen(stayShow, containerRef);
   return (
-    <FocusTrap refFocus={containerRef}>
+    <FocusTrap
+      focusTrapOptions={{
+        allowOutsideClick: true,
+      }}
+    >
       <div
         className={clsx(
           " fixed  z-50 max-w-full bg-pop   overflow-auto max-h-full   border-opacity-25 border border-borderFull left-0 top-0 p-1 rounded-md",

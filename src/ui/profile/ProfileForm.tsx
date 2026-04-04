@@ -91,7 +91,11 @@ export default function ProfileForm() {
     enabled: !!user_id,
   });
 
-  const { data: profileData, status } = queryData || {
+  const {
+    data: profileData,
+    status,
+    error,
+  } = queryData || {
     data: null,
     error: "something went wrong",
     status: 500,
@@ -170,14 +174,13 @@ export default function ProfileForm() {
     },
   });
 
-  if (queryError || (status !== 200 && status !== 401 && user_id)) {
-    return null;
+  if (queryError || (status !== 200 && status !== 401 && user_id) || error) {
+    throw new Error("page-load-error");
   }
   const handleAction = async (data: FormDataType) => {
     const cleanedProfile = removeUnusedFields(data);
     mutation.mutate(cleanedProfile);
   };
-  if (queryError) return null;
   if (isFetching) return <ProfileLoading />;
 
   return (

@@ -3,6 +3,10 @@ import { Noto_Sans, Noto_Sans_Myanmar } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import NextTopLoader from "nextjs-toploader";
+import { Suspense } from "react";
+import PageLoading from "@/ui/loading/PageLoading";
+import DeviceCheckFetcher from "@/ui/DeviceCheck/DeviceCheckFetcher";
+import { NextIntlClientProvider } from "next-intl";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -64,7 +68,11 @@ export default function RootLayout({
             zIndex={1600}
             showAtBottom={false}
           />
-          {children}
+          <Suspense fallback={<PageLoading />}>
+            <DeviceCheckFetcher>
+              <NextIntlClientProvider>{children}</NextIntlClientProvider>
+            </DeviceCheckFetcher>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>

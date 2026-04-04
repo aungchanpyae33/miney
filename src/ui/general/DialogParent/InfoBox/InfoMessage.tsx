@@ -24,7 +24,7 @@ function InfoMessage() {
           <Dialog.Title className="-mt-1.5 mb-2 text-lg font-medium">
             {b("noti")}
           </Dialog.Title>
-          <Dialog.Description className="mb-6 text-base break-all leading-relaxed ">
+          <Dialog.Description className="mb-6 text-base break-all">
             {formSubmitMsg}
           </Dialog.Description>
           <div className="flex justify-end gap-4">

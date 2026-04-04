@@ -28,8 +28,10 @@ function ProfileViewWrapper() {
   };
 
   if (isFetching) return <ProfileLoading />;
-  if (!profileData || error || status !== 200 || queryError)
-    return <EmptyData />;
+  if (queryError || (status !== 200 && status !== 401 && user_id) || error) {
+    throw new Error("page-load-error");
+  }
+  if (!profileData || status !== 200) return <EmptyData />;
   return <ProfileViewContent profileData={profileData} />;
 }
 
