@@ -169,7 +169,6 @@ export default function ProfileForm() {
       }
     },
   });
-
   if (queryError || (status !== 200 && status !== 401)) {
     throw new Error("page-load-error");
   }

@@ -1,22 +1,19 @@
 import { RefObject, useContext, useRef } from "react";
 import clsx from "clsx";
-import { ContextMoreOption } from "./MoreOptionContext";
-import { ContextMoreOptionStack } from "./MoreOptionStackContext";
 import {
   motion,
   useAnimate,
   useDragControls,
   useMotionValue,
 } from "motion/react";
-import { ContextMoreOptionUnique } from "./MoreOptionUniqueContext";
 import { useToggleContentPosition } from "@/lib/CustomHooks/useToggleContentPosition";
 import useOutterClick from "@/lib/CustomHooks/useOutterClick";
 import useCloseFunctoion from "@/lib/CustomHooks/useCloseFunction";
-import FocusTrap from "../FocusTrap";
 import useFocusOnOpen from "@/lib/CustomHooks/useFocusOpen";
-import TipUi from "../TipUi";
+import { useEnableScroll } from "@/lib/CustomHooks/useEableScroll";
+import { ContextMoreOptionUnique } from "./MoreOptionUniqueContext";
 import { ContextDevice } from "@/ui/DeviceCheck/DeviceCheckContext";
-
+import { FocusTrap } from "focus-trap-react";
 interface ToggleContentProps extends React.ComponentProps<"div"> {
   parentRef: RefObject<HTMLButtonElement | null>;
   children: React.ReactNode;
@@ -41,15 +38,19 @@ function ToggleContentFloat({
     staticUp,
   });
   // outterclick is to detect click is inside portal and targert parent trigger or not inside when portal is open
+  useEnableScroll(containerRef);
   useOutterClick(show, setShow, containerRef, parentRef);
+  useCloseFunctoion(show, () => setShow(false), containerRef);
   useFocusOnOpen(stack === 0, containerRef);
-  useCloseFunctoion(show, setShow, parentRef);
-
   return (
-    <FocusTrap refFocus={containerRef}>
+    <FocusTrap
+      focusTrapOptions={{
+        allowOutsideClick: true,
+      }}
+    >
       <div
         className={clsx(
-          " fixed z-50 overflow-auto max-w-full  bg-pop max-h-full border border-bordersoft left-0 top-0 p-1 rounded-md",
+          " fixed z-50 overflow-auto max-w-full  bg-pop max-h-full border border-borderFull left-0 top-0 p-1 rounded-md",
         )}
         ref={containerRef}
         tabIndex={-1}
@@ -66,10 +67,8 @@ const bottom = 20;
 // to sastify the bottom-5 in close
 
 function ToggleContentMobile({
-  parentRef,
   children,
 }: {
-  parentRef: ToggleContentProps["parentRef"];
   children: ToggleContentProps["children"];
 }) {
   const [scope, animate] = useAnimate();
@@ -106,64 +105,70 @@ function ToggleContentMobile({
     });
   }
 
+  useCloseFunctoion(show, () => setShow(false), containerRef);
   useFocusOnOpen(stack === 0, containerRef);
-  useCloseFunctoion(show, setShow, parentRef);
-
   return (
     <div ref={scope} className="z-50">
-      <FocusTrap refFocus={containerRef}>
-        <motion.div
-          onClick={(e) => {
-            if (e.target === e.currentTarget) return;
+      <motion.div
+        onClick={(e) => {
+          if (e.target === e.currentTarget) return;
+          onCloseAnimation();
+        }}
+        id="drawer"
+        initial={{ y: "100%" }}
+        animate={{ y: "0%" }}
+        transition={{
+          ease: "easeInOut",
+        }}
+        className={clsx(
+          " fixed z-10 p-2 bottom-5 left-2 right-2 overflow-hidden rounded-md bg-pop",
+          {
+            hidden: uuidState !== "",
+          },
+        )}
+        style={{ y }}
+        drag="y"
+        dragControls={controls}
+        onDragEnd={(_, info) => {
+          if (info.offset.y > 60) {
             onCloseAnimation();
-          }}
-          id="drawer"
-          initial={{ y: "100%" }}
-          animate={{ y: "0%" }}
-          transition={{
-            ease: "easeInOut",
-          }}
-          className={clsx(
-            " fixed z-10 p-2 bottom-5 left-2 right-2 overflow-hidden rounded-md bg-pop",
-            {
-              hidden: uuidState !== "",
-            },
-          )}
-          style={{ y }}
-          drag="y"
-          dragControls={controls}
-          onDragEnd={(_, info) => {
-            if (info.offset.y > 60) {
-              onCloseAnimation();
-            }
-          }}
-          dragListener={false}
-          dragConstraints={{
-            top: 0,
-            bottom: 0,
-          }}
-          ref={containerRef}
-          tabIndex={-1}
-          dragElastic={{
-            top: 0,
-            bottom: 0.5,
+          }
+        }}
+        dragListener={false}
+        dragConstraints={{
+          top: 0,
+          bottom: 0,
+        }}
+        ref={containerRef}
+        tabIndex={-1}
+        dragElastic={{
+          top: 0,
+          bottom: 0.5,
+        }}
+      >
+        <FocusTrap
+          active={uuidState === ""}
+          focusTrapOptions={{
+            allowOutsideClick: true,
           }}
         >
-          <TipUi controls={controls} />
-          <div className="w-full">{children}</div>
-        </motion.div>
-        <motion.div
-          id="backDrop"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ ease: "easeInOut" }}
-          onClick={onCloseAnimation}
-          aria-hidden
-          className={clsx("fixed  top-0 left-0 bottom-0 right-0 bg-backdrop", {
-            hidden: uuidState !== "",
-          })}
-        ></motion.div>
-      </FocusTrap>
+          <div className="w-full h-full" tabIndex={0}>
+            <TipUi controls={controls} />
+            <div className="w-full">{children}</div>
+          </div>
+        </FocusTrap>
+      </motion.div>
+      <motion.div
+        id="backDrop"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeInOut" }}
+        onClick={onCloseAnimation}
+        aria-hidden
+        className={clsx("fixed  top-0 left-0 bottom-0 right-0 bg-backdrop", {
+          hidden: uuidState !== "",
+        })}
+      ></motion.div>
     </div>
   );
 }
@@ -185,7 +190,7 @@ function ToggleContent({
       {children}
     </ToggleContentFloat>
   ) : (
-    <ToggleContentMobile parentRef={parentRef}>{children}</ToggleContentMobile>
+    <ToggleContentMobile>{children}</ToggleContentMobile>
   );
 }
 
