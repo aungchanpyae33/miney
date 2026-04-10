@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "Bubble",
+    siteName: "Miney",
   },
   manifest: "/site.webmanifest",
 };
