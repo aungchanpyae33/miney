@@ -13,13 +13,6 @@ export async function generateMetadata() {
     alternates: {
       canonical: "/",
     },
-    openGraph: {
-      title: meta("default.title"),
-      description: meta("default.description"),
-      url: "/",
-      type: "website",
-      siteName: "Miney",
-    },
   };
 }
 

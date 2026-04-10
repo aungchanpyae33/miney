@@ -1,3 +1,4 @@
+import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import AuthContainer from "@/ui/auth/AuthContainer";
 import BrandTitle from "@/ui/auth/BrandTitle";
 import SignUpInstruction from "@/ui/auth/signupScuuess/SignUpInstruction";
@@ -6,18 +7,19 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata() {
   const meta = await getTranslations("MetaData");
-
   return {
     title: meta("authConfirm.title"),
     description: meta("authConfirm.description"),
-    metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
-
+    metadataBase: outputBaseUrl(),
+    robots: {
+      index: false,
+      follow: false,
+    },
     openGraph: {
-      title: meta("authConfirm.title"),
-      description: meta("authConfirm.description"),
-      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/auth/sign-up-success`,
-      type: "website",
-      siteName: "Miney",
+      images: [],
+    },
+    twitter: {
+      images: [],
     },
   };
 }
