@@ -16,7 +16,10 @@ export async function generateMetadata(props: {
       title: meta("userPage.notFoundTitle"),
       description: meta("userPage.notFoundDescription"),
       metadataBase: outputBaseUrl(),
-
+      robots: {
+        index: false,
+        follow: false,
+      },
       openGraph: {
         title: meta("userPage.notFoundTitle"),
         description: meta("userPage.notFoundDescription"),
