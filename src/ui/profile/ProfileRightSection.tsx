@@ -18,6 +18,7 @@ function ProfileRightSection() {
   const { data: profileData, status } = queryData || {
     data: null,
     error: "something went wrong",
+    status: !user_id ? 401 : 500,
   };
   if (queryError || (status !== 200 && status !== 401)) {
     throw new Error("page-load-error");
