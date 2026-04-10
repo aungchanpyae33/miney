@@ -3,6 +3,7 @@ import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import DynamicViewProfile from "@/ui/DynamicViewProfile/DynamicViewProfile";
 import ProfileLoading from "@/ui/loading/ProfileLoading";
 import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 export async function generateMetadata(props: {
@@ -10,24 +11,9 @@ export async function generateMetadata(props: {
 }) {
   const { user } = await props.params;
   const meta = await getTranslations("MetaData");
-  const { data, status } = await getUserDynamicProfileCache(user);
-  if (!data || status !== 200)
-    return {
-      title: meta("userPage.notFoundTitle"),
-      description: meta("userPage.notFoundDescription"),
-      metadataBase: outputBaseUrl(),
-      robots: {
-        index: false,
-        follow: false,
-      },
-      openGraph: {
-        title: meta("userPage.notFoundTitle"),
-        description: meta("userPage.notFoundDescription"),
-        url: `/user/${user}`,
-        type: "profile",
-        siteName: "Miney",
-      },
-    };
+  const { data, error, status } = await getUserDynamicProfileCache(user);
+  if (error || status !== 200) throw new Error("page-load-error");
+  if (!data) notFound();
   const userName = data.text_name;
 
   return {
