@@ -1,23 +1,25 @@
+import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import AuthContainer from "@/ui/auth/AuthContainer";
 import BrandTitle from "@/ui/auth/BrandTitle";
 import SignInText from "@/ui/auth/signupForm/SignInText";
 import SignUpFormContainer from "@/ui/auth/signupForm/SignUpFormContainer";
 import TitleSignUp from "@/ui/auth/signupForm/TitleSignUp";
+import type { ResolvingMetadata } from "next";
 import { getTranslations } from "next-intl/server";
-export async function generateMetadata() {
-  const meta = await getTranslations("MetaData");
-
+export async function generateMetadata(_: unknown, parent: ResolvingMetadata) {
+  const [meta, parentMeta] = await Promise.all([
+    getTranslations("MetaData"),
+    parent,
+  ]);
+  const parentOg = parentMeta.openGraph;
   return {
     title: meta("authSignup.title"),
     description: meta("authSignup.description"),
-    metadataBase: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
+    metadataBase: outputBaseUrl(),
 
     openGraph: {
-      title: meta("authSignup.title"),
-      description: meta("authSignup.description"),
-      url: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/auth/sign-up`,
-      type: "website",
-      siteName: "Miney",
+      ...parentOg,
+      url: "/auth/sign-up",
     },
   };
 }

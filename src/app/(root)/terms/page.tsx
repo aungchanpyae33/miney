@@ -1,21 +1,22 @@
 import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import ContextTextBoxLoading from "@/ui/loading/ContextTextBoxLoading";
+import type { ResolvingMetadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 
-export async function generateMetadata() {
-  const meta = await getTranslations("MetaData");
-
+export async function generateMetadata(_: unknown, parent: ResolvingMetadata) {
+  const [meta, parentMeta] = await Promise.all([
+    getTranslations("MetaData"),
+    parent,
+  ]);
+  const parentOg = parentMeta.openGraph;
   return {
     title: meta("termsPage.title"),
     description: meta("termsPage.description"),
     metadataBase: outputBaseUrl(),
     openGraph: {
-      title: meta("termsPage.title"),
-      description: meta("termsPage.description"),
+      ...parentOg,
       url: "/terms",
-      type: "website",
-      siteName: "Miney",
     },
   };
 }
