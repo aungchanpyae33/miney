@@ -94,7 +94,7 @@ export default function ProfileForm() {
   const { data: profileData, status } = queryData || {
     data: null,
     error: "something went wrong",
-    status: 500,
+    status: !user_id ? 401 : 500,
   };
   const data = profileData ?? defaultProfile;
   const methods = useForm<FormDataType>({
