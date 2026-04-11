@@ -21,6 +21,7 @@ function ProfileViewWrapper() {
   const { data: profileData, status } = queryData || {
     data: null,
     error: "something went wrong",
+    status: !user_id ? 401 : 500,
   };
 
   if (isFetching) return <ProfileLoading />;
