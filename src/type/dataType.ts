@@ -8,7 +8,7 @@ export interface ProfileDataOutput {
   text_date_birth: string;
   text_name: string;
   text_pick_mbti: string;
-  text_select_friendness: string;
+  text_slider_friendness: string;
   text_select_gender: string;
   text_select_relationship: string;
   text_textarea_bio: string;
