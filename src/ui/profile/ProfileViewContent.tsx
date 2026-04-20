@@ -46,13 +46,13 @@ function ProfileViewContent({
               if (!item) return;
               return <Age key={key} label={t(`${key}.label`)} year={item} />;
             }
-            if (key === "text_select_friendness") {
+            if (key === "text_slider_friendness") {
               const item = data[key];
               return (
                 <Friendliness
                   key={key}
                   label={t(`${key}.label`)}
-                  text_select_friendness={item}
+                  text_slider_friendness={item}
                 />
               );
             }

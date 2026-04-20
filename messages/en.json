@@ -22,7 +22,7 @@
         "preferNotToSay": "Prefer not to say"
       }
     },
-    "text_select_friendness": {
+    "text_slider_friendness": {
       "label": "How friendly do you think you are?",
       "options": {
         "none": "Select a number",
@@ -117,7 +117,7 @@
         "preferNotToSay": "Prefer not to say"
       }
     },
-    "text_select_friendness": {
+    "text_slider_friendness": {
       "label": "friendliness"
     },
     "text_select_relationship": {

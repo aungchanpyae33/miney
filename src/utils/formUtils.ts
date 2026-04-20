@@ -56,7 +56,7 @@ export function isRequired(text: string) {
   if (
     text === "text_name" ||
     text === "text_select_gender" ||
-    text === "text_select_friendness"
+    text === "text_slider_friendness"
   )
     return true;
   return false;

@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS "public"."profile" (
     "profile_avatar_url" "text",
     "text_name" "text" NOT NULL,
     "text_select_gender" "text" NOT NULL,
-    "text_select_friendness" "text" NOT NULL,
+    "text_slider_friendness" "text" NOT NULL,
     "text_date_birth" "text",
     "text_pick_mbti" "text",
     "multiple_own_hobby" "jsonb",

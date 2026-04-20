@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import { isRequired } from "@/utils/formUtils";
 import TextAreaField from "../Input/TextareaField";
 import { ProfileDataOutput } from "@/type/dataType";
+import SliderField from "../Input/SliderField";
 
 function FormChildContainer({ data }: { data: ProfileDataOutput }) {
   const t = useTranslations("FormEdit");
@@ -22,14 +23,7 @@ function FormChildContainer({ data }: { data: ProfileDataOutput }) {
         value: "preferNotToSay",
       },
     ],
-    text_select_friendness: [
-      { label: t("text_select_friendness.options.none"), value: "" },
-      { label: t("text_select_friendness.options.1"), value: "1" },
-      { label: t("text_select_friendness.options.2"), value: "2" },
-      { label: t("text_select_friendness.options.3"), value: "3" },
-      { label: t("text_select_friendness.options.4"), value: "4" },
-      { label: t("text_select_friendness.options.5"), value: "5" },
-    ],
+
     text_select_relationship: [
       {
         label: t("text_select_relationship.options.none"),
@@ -77,7 +71,19 @@ function FormChildContainer({ data }: { data: ProfileDataOutput }) {
         if (key === "profile_avatar_url") {
           return null;
         }
+
         if (key.startsWith("text")) {
+          if (key === "text_slider_friendness") {
+            return (
+              <SliderField
+                required={isRequired(key)}
+                key={key}
+                name={key}
+                label={t(`${key}.label`)}
+              />
+            );
+          }
+
           if (key.includes("name")) {
             return (
               <TextField

@@ -6,7 +6,7 @@ import { normalizeProfileData } from "@/utils/formUtils";
 type InsertProfileRequiredFields = {
   text_name: string;
   text_select_gender: string;
-  text_select_friendness: string;
+  text_slider_friendness: string;
 };
 export const uploadData = async (
   prevState: UserProfile,
@@ -67,7 +67,7 @@ export const uploadData = async (
             profile_avatar_url,
             text_name,
             text_select_gender,
-            text_select_friendness,
+            text_slider_friendness,
             text_textarea_bio,
             text_date_birth,
             text_select_relationship,
@@ -95,7 +95,7 @@ export const uploadData = async (
           profile_avatar_url,
           text_name,
           text_select_gender,
-          text_select_friendness,
+          text_slider_friendness,
           text_textarea_bio,
           text_date_birth,
           text_select_relationship,

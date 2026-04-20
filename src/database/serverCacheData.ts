@@ -15,7 +15,7 @@ export const getUserDynamicProfileCache = cache(
         profile_avatar_url,
         text_name,
         text_select_gender,
-        text_select_friendness,
+        text_slider_friendness,
         text_textarea_bio,
         text_date_birth,
         text_select_relationship,

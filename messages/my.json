@@ -22,7 +22,7 @@
         "preferNotToSay": "မပြောလိုပါ"
       }
     },
-    "text_select_friendness": {
+    "text_slider_friendness": {
       "label": "သင့်ကိုယ်သင် ဘလောက်ထိဖော်ရွေတယ်လို့ထင်ပါသလဲ",
       "options": {
         "none": "နံပါတ်တခုရွေးပေးပါ",
@@ -117,7 +117,7 @@
         "preferNotToSay": "မပြောလိုပါ"
       }
     },
-    "text_select_friendness": {
+    "text_slider_friendness": {
       "label": "ဖော်ရွေမှု"
     },
     "text_select_relationship": {
