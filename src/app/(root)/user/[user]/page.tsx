@@ -1,4 +1,7 @@
-import { getUserDynamicProfileCache } from "@/database/serverCacheData";
+import {
+  checkUserExistCache,
+  getUserDynamicProfileCache,
+} from "@/database/serverCacheData";
 import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import DynamicViewProfile from "@/ui/DynamicViewProfile/DynamicViewProfile";
 import ProfileLoading from "@/ui/loading/ProfileLoading";
@@ -10,6 +13,8 @@ export async function generateMetadata(props: {
   params: Promise<{ user: string }>;
 }) {
   const { user } = await props.params;
+  const userExists = await checkUserExistCache(user);
+  if (!userExists) notFound();
   const meta = await getTranslations("MetaData");
   const { data, error, status } = await getUserDynamicProfileCache(user);
   if (error || status !== 200) throw new Error("page-load-error");
@@ -33,6 +38,8 @@ export async function generateMetadata(props: {
 
 async function page(props: { params: Promise<{ user: string }> }) {
   const { user } = await props.params;
+  const userExists = await checkUserExistCache(user);
+  if (!userExists) notFound();
   return (
     <div className="mt-10">
       <Suspense fallback={<ProfileLoading />}>
