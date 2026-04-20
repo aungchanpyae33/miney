@@ -1,11 +1,11 @@
 function Friendliness({
   label,
-  text_select_friendness,
+  text_slider_friendness,
 }: {
   label: string;
-  text_select_friendness: string;
+  text_slider_friendness: string;
 }) {
-  const friendnesssPercentage = Number(text_select_friendness) * 20;
+  const friendnesssPercentage = Number(text_slider_friendness);
   return (
     <div className="h-16 flex flex-col justify-center gap-1">
       <h3 className="font-semibold">

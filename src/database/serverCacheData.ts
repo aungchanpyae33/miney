@@ -15,7 +15,7 @@ export const getUserDynamicProfileCache = cache(
         profile_avatar_url,
         text_name,
         text_select_gender,
-        text_select_friendness,
+        text_slider_friendness,
         text_textarea_bio,
         text_date_birth,
         text_select_relationship,
@@ -35,6 +35,25 @@ export const getUserDynamicProfileCache = cache(
       return { data: normalizedData, error, status };
     } catch (error) {
       return { data: null, error, status: 500 };
+    }
+  },
+);
+
+export const checkUserExistCache = cache(
+  async (id: string): Promise<boolean> => {
+    try {
+      const supabase = await createClient();
+      const { data, error, status } = await supabase
+        .from("profile")
+        .select("id")
+        .eq("id", id)
+        .maybeSingle();
+      if (error || status !== 200) {
+        return false;
+      }
+      return !!data;
+    } catch {
+      return false;
     }
   },
 );

@@ -22,7 +22,7 @@
         "preferNotToSay": "Prefer not to say"
       }
     },
-    "text_select_friendness": {
+    "text_slider_friendness": {
       "label": "How friendly do you think you are?",
       "options": {
         "none": "Select a number",
@@ -117,7 +117,7 @@
         "preferNotToSay": "Prefer not to say"
       }
     },
-    "text_select_friendness": {
+    "text_slider_friendness": {
       "label": "friendliness"
     },
     "text_select_relationship": {
@@ -183,6 +183,8 @@
     "deleteProfileWarning": "By clicking Delete, your profile will be permanently removed. This action cannot be undone.",
     "deleteUserWarning": "By clicking Delete, your account will be permanently removed. This action cannot be undone.",
     "needToLogin": "Sign In Required",
+    "notFoundDataTitle": "Not Found",
+    "notFoundDataText": "User does not have a profile created yet.",
     "globalNotFoundTitle": "We can't find the page",
     "globalNotFoundText": "Please try searching for something else"
   },
@@ -230,7 +232,6 @@
     "email": "aung.c.pyae@outlook.com",
     "beforeSubmitNotice": "By saving the profile form, you are deemed to have accepted Miney's <privacy>Privacy Policy</privacy> and <terms>Terms & Conditions</terms> ",
     "profileLinkCopy": "Profile link copied",
-    "notFoundData": "User may not exist or create the profile yet.",
     "changeLanguage": "Language",
     "en": "English",
     "my": "မြန်မာ",
