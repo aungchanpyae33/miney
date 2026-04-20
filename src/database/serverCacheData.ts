@@ -38,3 +38,22 @@ export const getUserDynamicProfileCache = cache(
     }
   },
 );
+
+export const checkUserExistCache = cache(
+  async (id: string): Promise<boolean> => {
+    try {
+      const supabase = await createClient();
+      const { data, error, status } = await supabase
+        .from("profile")
+        .select("id")
+        .eq("id", id)
+        .maybeSingle();
+      if (error || status !== 200) {
+        return false;
+      }
+      return !!data;
+    } catch {
+      return false;
+    }
+  },
+);
