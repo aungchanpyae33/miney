@@ -17,6 +17,15 @@ export function authErrorReturn(authError: AuthApiError): string {
     case "user_already_exists":
       return "alreadyUser";
 
+    case "same_password":
+      return "samePassword";
+
+    case "over_email_send_rate_limit":
+      return "emailRateLimitExceeded";
+
+    case "over_request_rate_limit":
+      return "requestRateLimitExceeded";
+
     case "user_not_found":
       return "notFoundUser";
 
