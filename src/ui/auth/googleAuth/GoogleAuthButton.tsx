@@ -28,7 +28,7 @@ async function GoogleAuthButton({
   }
   return (
     <Button
-      className="flex items-end p-2 gap-2 mx-auto w-2/3 justify-center "
+      className="flex items-end p-2 gap-2 mx-auto min-w-[66.666%] max-w-full overflow-hidden justify-center "
       onClick={handleGoogleSignIn}
     >
       <span>
