@@ -1,0 +1,437 @@
+{
+  "FormEdit": {
+    "text_name": {
+      "label": "Nombre",
+      "placeholder": "Tu nombre"
+    },
+    "text_textarea_bio": {
+      "label": "Biografía",
+      "placeholder": "¿Cómo te describirías?"
+    },
+    "text_date_birth": {
+      "label": "Año de nacimiento",
+      "placeholder": "Ingresa solo tu año de nacimiento"
+    },
+    "text_select_gender": {
+      "label": "Tu género",
+      "options": {
+        "none": "Selecciona tu género",
+        "male": "Masculino",
+        "female": "Femenino",
+        "nonBinary": "No binario",
+        "preferNotToSay": "Prefiero no decirlo"
+      }
+    },
+    "text_slider_friendness": {
+      "label": "¿Qué tan amigable te consideras?",
+      "options": {
+        "none": "Selecciona un número",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    "text_select_relationship": {
+      "label": "Situación sentimental",
+      "options": {
+        "none": "Selecciona tu situación sentimental",
+        "single": "Soltero/a",
+        "relationship": "En una relación",
+        "married": "Casado/a",
+        "complicated": "Es complicado"
+      }
+    },
+    "text_pick_mbti": {
+      "label": "MBTI",
+      "placeholder": "Ej: ISTJ"
+    },
+    "multiple_own_hobby": {
+      "label": "Tus aficiones",
+      "placeholder": "Ej: Escuchar música..."
+    },
+    "multiple_fav_song": {
+      "label": "Canciones favoritas",
+      "placeholder": "Ej: Love 119 (RIIZE)..."
+    },
+    "multiple_fav_artist": {
+      "label": "Artistas favoritos",
+      "placeholder": "Ej: NewJeans..."
+    },
+    "multiple_fav_books": {
+      "label": "Libros favoritos",
+      "placeholder": "Ej: El Principito..."
+    },
+    "multiple_fav_food": {
+      "label": "Comidas favoritas",
+      "placeholder": "Ej: Pollo frito..."
+    },
+    "multiple_fav_movie": {
+      "label": "Películas y series favoritas",
+      "placeholder": "Ej: El Gato con Botas..."
+    },
+    "multiple_own_comfort_zone": {
+      "label": "Tus zonas de confort",
+      "placeholder": "Ej: Quedarme en casa..."
+    }
+  },
+  "FormView": {
+    "text_name": {
+      "label": "Nombre"
+    },
+    "updated_at": {
+      "ago": "hace",
+
+      "seconds": "{ago} {number} segundos",
+      "second": "{ago} {number} segundo",
+
+      "minutes": "{ago} {number} minutos",
+      "minute": "{ago} {number} minuto",
+
+      "hours": "{ago} {number} horas",
+      "hour": "{ago} {number} hora",
+
+      "days": "{ago} {number} días",
+      "day": "{ago} {number} día",
+
+      "months": "{ago} {number} meses",
+      "month": "{ago} {number} mes",
+
+      "years": "{ago} {number} años",
+      "year": "{ago} {number} año"
+    },
+    "text_textarea_bio": {
+      "label": "Biografía"
+    },
+    "text_date_birth": {
+      "label": "Año de nacimiento"
+    },
+    "text_select_gender": {
+      "label": "Género",
+      "options": {
+        "none": "Selecciona tu género",
+        "male": "Masculino",
+        "female": "Femenino",
+        "nonBinary": "No binario",
+        "preferNotToSay": "Prefiero no decirlo"
+      }
+    },
+    "text_slider_friendness": {
+      "label": "Amabilidad"
+    },
+    "text_select_relationship": {
+      "label": "Situación sentimental",
+      "options": {
+        "none": "Selecciona tu situación sentimental",
+        "single": "Soltero/a",
+        "relationship": "En una relación",
+        "married": "Casado/a",
+        "complicated": "Es complicado"
+      }
+    },
+    "text_pick_mbti": {
+      "label": "MBTI"
+    },
+    "multiple_own_hobby": {
+      "label": "Aficiones"
+    },
+    "multiple_fav_song": {
+      "label": "Canciones favoritas"
+    },
+    "multiple_fav_artist": {
+      "label": "Artistas favoritos"
+    },
+    "multiple_fav_books": {
+      "label": "Libros favoritos"
+    },
+    "multiple_fav_food": {
+      "label": "Comidas favoritas"
+    },
+    "multiple_fav_movie": {
+      "label": "Películas y series favoritas"
+    },
+    "multiple_own_comfort_zone": {
+      "label": "Zonas de confort"
+    }
+  },
+  "ErrorMsg": {
+    "required": "El campo {label} debe completarse para enviar",
+    "noMBTI": "No se encontró el MBTI",
+    "maxLength": "La longitud máxima es de {max} caracteres",
+    "minLength": "La longitud mínima es de {min} caracteres",
+    "minLengthPassword": "La contraseña debe tener al menos {min} caracteres",
+    "passwordComplexity": "La contraseña debe incluir mayúsculas, minúsculas, un número, un símbolo y tener al menos {min} caracteres",
+    "onlyNumbers": "Solo se permiten números",
+    "invalidYear": "Por favor, ingresa un año de nacimiento válido",
+    "outOfRangeYear": "Por favor, ingresa un año entre 1900 y {currentYear}",
+    "wrongEmail": "Por favor, proporciona una dirección de correo electrónico válida",
+    "wentWrong": "Algo salió mal",
+    "alreadyEmail": "Este correo electrónico ya está registrado",
+    "samePassword": "La nueva contraseña es igual a la anterior. Por favor, usa una diferente",
+    "emailRateLimitExceeded": "El envío de correos electrónicos está un poco ocupado ahora. Por favor, inténtalo de nuevo más tarde.",
+    "requestRateLimitExceeded": "Demasiadas solicitudes. Por favor, inténtalo de nuevo más tarde.",
+    "notConfirmEmail": "Por favor, confirma primero tu correo electrónico",
+    "wrongCredentials": "Las credenciales que escribiste son incorrectas",
+    "alreadyUser": "El usuario ya existe. Por favor, inicia sesión",
+    "notFoundUser": "El usuario no existe. Por favor, regístrate",
+    "notFieldChange": "Los datos de los campos de entrada no han cambiado",
+    "wentWrongUploadImage": "Hubo un problema al subir la imagen",
+    "globalErrorTitle": "No se pudo cargar esta página.",
+    "globalErrorText": "Por favor, recarga para intentarlo de nuevo o vuelve atrás.",
+    "authErrorTitle": "Error de autenticación",
+    "authErrorText": "Hubo un error con tu autenticación. Por favor, inténtalo de nuevo."
+  },
+  "WarningMsg": {
+    "3isMax": "Se permite un máximo de 3 elementos",
+    "unsaved": "Tienes cambios sin guardar. ¿Estás seguro de que quieres salir sin guardar?",
+    "deleteProfileWarning": "Al hacer clic en Eliminar, tu perfil será removido permanentemente. Esta acción no se puede deshacer.",
+    "deleteUserWarning": "Al hacer clic en Eliminar, tu cuenta será removida permanentemente. Esta acción no se puede deshacer.",
+    "needToLogin": "Es necesario iniciar sesión",
+    "notFoundDataTitle": "No encontrado",
+    "notFoundDataText": "El usuario aún no ha creado un perfil.",
+    "globalNotFoundTitle": "No podemos encontrar la página",
+    "globalNotFoundText": "Por favor, intenta buscar otra cosa"
+  },
+  "NotiMsg": {
+    "editSuccess": "Los datos de tu perfil se han actualizado con éxito",
+    "deleteProfileSuccess": "Los datos de tu perfil se han eliminado con éxito",
+    "deleteUserSuccess": "Tu cuenta se ha eliminado con éxito"
+  },
+  "block": {
+    "home": "Inicio",
+    "back": "Atrás",
+    "reload": "Recargar",
+    "noti": "Aviso",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "discard": "Descartar",
+    "delete": "Eliminar",
+    "close": "Cerrar",
+    "submit": "Enviar",
+    "save": "Guardar",
+    "crop": "Recortar tu foto",
+    "theme": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "deviceTheme": "Tema del dispositivo",
+    "textAreaNotice": "Al presionar 'Enter' en el teclado, puedes agregar más elementos",
+    "warningImage": "Carga archivos de tipo (png, jpeg, webp). El tamaño máximo es de 3MB",
+    "not_valid": "Por favor, selecciona un archivo de imagen válido.",
+    "exceed_size": "El tamaño de la imagen no puede superar los 3MB.",
+    "needLoginForm": "Necesitas iniciar sesión antes de crear tu formulario de perfil",
+    "login": "Iniciar sesión",
+    "signUp": "Registrarse",
+    "logout": "Cerrar sesión",
+    "edit": "Editar",
+    "view": "Ver",
+    "language": "Idioma",
+    "english": "Inglés (English)",
+    "myanmar": "Birmano (Myanmar)",
+    "footerNoti": "Esta aplicación web para crear perfiles, Miney, es mantenida por una sola persona. Por lo tanto, no es fácil monitorear o proporcionar soporte en tiempo real. Por esta razón, ten en cuenta que no debes ingresar ninguna información personal importante (datos confidenciales). Además, ten cuidado de no subir fotos o textos que puedan causar molestias o angustia a los demás.",
+    "legal": "Información legal",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "cookie": "Política de cookies",
+    "contact": "Contacto",
+    "email": "aung.c.pyae@outlook.com",
+    "beforeSubmitNotice": "Al guardar el formulario del perfil, se considera que has aceptado la <privacy>Política de privacidad</privacy> y los <terms>Términos y condiciones</terms> de Miney.",
+    "profileLinkCopy": "Enlace del perfil copiado",
+    "changeLanguage": "Idioma",
+    "en": "English",
+    "my": "မြန်မာ",
+    "ja": "日本語",
+    "ko": "한국어",
+    "zh-CN": "简体中文",
+    "es": "Español",
+    "hi": "हिन्दी",
+    "id": "Bahasa Indonesia",
+    "th": "ไทย",
+    "vi": "Tiếng Việt",
+    "deleteAcc": "Eliminar cuenta",
+    "updatePassword": "Actualizar contraseña"
+  },
+  "Privacy": {
+    "title": "Política de Privacidad — Miney",
+    "lastUpdated": "Última actualización: ",
+    "date": "25 de noviembre de 2025",
+    "intro": "Miney respeta tu privacidad. Esta Política de privacidad explica cómo recopilamos, usamos y protegemos tus datos personales cuando usas nuestra aplicación web de intercambio de perfiles.",
+
+    "section1": {
+      "title": "1. Información que recopilamos",
+      "desc": "Cuando usas Miney, recopilamos la siguiente información:",
+      "mandatory": "Nombre\nGénero\nAmabilidad",
+      "optional": "Foto de perfil\nBiografía\nAño de nacimiento\nSituación sentimental\nMBTI\nAficiones\nCanciones, artistas, libros, comidas y películas favoritas\nZonas de confort",
+      "media": "Multimedia: Los usuarios pueden subir imágenes de forma opcional. No se requieren videos ni documentos."
+    },
+
+    "section2": {
+      "title": "2. Cómo usamos tus datos",
+      "use": "Para crear tu perfil público y que puedas compartirlo con otros.\nPara personalizar tu experiencia en la aplicación.",
+      "no": "Nosotros no:\nRecopilamos datos analíticos (ej. Google Analytics, Sentry)\nRastreamos errores ni registramos la actividad del usuario"
+    },
+
+    "section3": {
+      "title": "3. Almacenamiento de datos",
+      "desc": "La información de tu perfil se almacena en Supabase Postgres.\nLas imágenes se almacenan en Supabase Storage."
+    },
+
+    "section4": {
+      "title": "4. Autenticación",
+      "desc": "Utilizamos Supabase Auth con correo electrónico/contraseña y Google OAuth."
+    },
+
+    "section5": {
+      "title": "5. Compartir datos",
+      "desc": "Nunca compartimos tus datos personales con terceros, excepto proveedores de infraestructura necesarios como Supabase o Vercel."
+    },
+
+    "section6": {
+      "title": "6. Control del usuario",
+      "desc": "Puedes eliminar tu cuenta y todos los datos del perfil asociados a través de tu panel de control. No podrás recuperar tus datos una vez eliminados."
+    },
+
+    "section7": {
+      "title": "7. Seguridad",
+      "desc": "Implementamos prácticas de seguridad estándar para proteger tus datos, pero ten en cuenta que ningún sistema es completamente seguro."
+    },
+
+    "section8": {
+      "title": "8. Soporte",
+      "contact": "Contacto: ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Terms": {
+    "title": "Términos y Condiciones – Miney",
+    "lastUpdated": "Última actualización: ",
+    "date": "25 de noviembre de 2025",
+    "intro": "Al usar Miney, aceptas los siguientes términos:",
+
+    "section1": {
+      "title": "1. Acerca de Miney",
+      "desc": "Miney es una aplicación web para compartir perfiles desarrollada y mantenida únicamente por Aung Chan Pyae (Bubble).",
+      "warning": "Esta aplicación web para crear perfiles, Miney, es mantenida por una sola persona. Por lo tanto, no es fácil monitorear o proporcionar soporte en tiempo real. Por esta razón, ten en cuenta que no debes ingresar ninguna información personal importante (datos confidenciales). Además, ten cuidado de no subir fotos o textos que puedan causar molestias o angustia a los demás."
+    },
+
+    "section2": {
+      "title": "2. Responsabilidad del usuario",
+      "items": "• Los usuarios deben proporcionar información precisa para los perfiles públicos.\n• No debes subir contenido dañino o ilegal."
+    },
+
+    "section3": {
+      "title": "3. Gestión de la cuenta",
+      "desc": "Los usuarios pueden crear, editar o eliminar sus perfiles en cualquier momento."
+    },
+
+    "section4": {
+      "title": "4. Limitación de responsabilidad",
+      "items": "• Miney no es un producto comercial.\n• El desarrollador no se hace responsable de los daños derivados del uso de la aplicación."
+    },
+
+    "section5": {
+      "title": "5. Modificaciones",
+      "desc": "Los términos pueden cambiar con el tiempo. El uso continuado constituye la aceptación de los mismos."
+    },
+    "section6": {
+      "title": "6. Soporte",
+      "contact": "Contacto: ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Cookie": {
+    "title": "Política de Cookies — Miney",
+    "lastUpdated": "Última actualización: ",
+    "date": "25 de noviembre de 2025",
+    "section1": {
+      "title": "1. ¿Qué son las Cookies?",
+      "desc": "Las cookies son pequeños archivos que se almacenan en tu dispositivo para ayudar a la aplicación a recordar tus preferencias y tu sesión de autenticación."
+    },
+    "section2": {
+      "title": "2. Cómo usamos las Cookies",
+      "list": "Autenticación: Mantenerte conectado de forma segura.\nPreferencia de idioma: Almacenar tu configuración de idioma/región elegida."
+    },
+    "section3": {
+      "title": "3. Gestión de Cookies",
+      "desc": "Puedes borrar o bloquear las cookies en tu navegador, pero es posible que algunas funciones de la aplicación no operen correctamente."
+    },
+    "section4": {
+      "title": "4. Soporte",
+      "contact": "Contacto: ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Auth": {
+    "createAccount": "Crear una cuenta nueva",
+    "loginAccount": "Iniciar sesión en una cuenta",
+    "email": "Correo electrónico",
+    "signInWithGoogle": "Iniciar sesión con Google",
+    "signUpWithGoogle": "Registrarse con Google",
+    "emailPlaceholder": "correo@ejemplo.com",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "forgotPasswordDescription": "Ingresa tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
+    "updatePasswordInstruction": "Por favor, ingresa tu nueva contraseña a continuación.",
+    "resetPassword": "Restablecer tu contraseña",
+    "checkEmail": "Revisa tu correo electrónico",
+    "updatePassword": "Actualizar contraseña",
+    "resetPasswordLinkSuccessContent": "El enlace para restablecer la contraseña ha sido enviado a tu dirección de correo. Por favor, revisa tu bandeja de entrada y haz clic en el enlace. Si no lo ves, revisa tu carpeta de spam o correo no deseado.",
+    "passwordPlaceholder": "contraseña",
+    "login": "Iniciar sesión",
+    "signUp": "Registrarse",
+    "sendResetLink": "Enviar enlace de restablecimiento",
+    "noAcc": "¿No tienes una cuenta? <link>Regístrate aquí</link>",
+    "alreadyAcc": "¿Ya tienes una cuenta? <link>Inicia sesión aquí</link>",
+    "signUpSuccess": "Verifica tu correo electrónico",
+    "signUpSuccessContent": "¡Registro exitoso! Por favor, revisa tu correo electrónico para confirmar tu cuenta. Si no lo ves, revisa tu carpeta de spam."
+  },
+  "MetaData": {
+    "cookiePage": {
+      "title": "Política de Cookies",
+      "description": "Descubre cómo Miney usa las cookies para mejorar tu experiencia y personalizar el contenido."
+    },
+    "termsPage": {
+      "title": "Términos y Condiciones",
+      "description": "Conoce los Términos y Condiciones de la aplicación web de Miney."
+    },
+    "privacyPage": {
+      "title": "Política de Privacidad",
+      "description": "Conoce la Política de Privacidad de la aplicación web de Miney."
+    },
+    "userPage": {
+      "description": "Echa un vistazo a este perfil de Miney para conocer las aficiones, favoritos y la personalidad del usuario."
+    },
+    "default": {
+      "title": "Miney",
+      "description": "Miney es una plataforma de perfiles sociales donde puedes compartir tus intereses, favoritos y personalidad en una simple tarjeta."
+    },
+    "authLogin": {
+      "title": "Iniciar sesión",
+      "description": "Inicia sesión en tu cuenta de Miney para acceder a tu perfil, editar tu información y compartir tu tarjeta personal."
+    },
+    "authSignup": {
+      "title": "Registrarse",
+      "description": "Regístrate para obtener una cuenta de Miney, acceder a tu perfil, editar tu información y compartir tu tarjeta personal."
+    },
+    "forgotPassword": {
+      "title": "Olvidé mi contraseña",
+      "description": "Ingresa tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña y recuperar el acceso a tu cuenta de Miney."
+    },
+    "checkResetLinkEmail": {
+      "title": "Revisa tu correo electrónico",
+      "description": "Hemos enviado un enlace de restablecimiento de contraseña a tu correo. Por favor, revísalo."
+    },
+    "updatePassword": {
+      "title": "Actualizar contraseña",
+      "description": "Ingresa tu nueva contraseña para cambiar la actual. Por favor, usa una que sea diferente a la anterior."
+    },
+    "authError": {
+      "title": "Error de autenticación",
+      "description": "Hubo un error con tu autenticación. Por favor, inténtalo de nuevo."
+    },
+    "authConfirm": {
+      "title": "Verificar cuenta",
+      "description": "Verifica tu cuenta usando el enlace de confirmación enviado a tu correo electrónico."
+    }
+  }
+}

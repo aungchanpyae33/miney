@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n/request";
+import type { Locale } from "@/i18n/request";
 import IconWrapper from "@/ui/general/IconWrapper";
 import OptionButton from "@/ui/general/modalOption/OptionButton";
 import OptionContainer from "@/ui/general/modalOption/OptionContainer";
@@ -50,14 +50,20 @@ function LanItem({
 function LanguageSub() {
   const router = useRouter();
   const loader = useTopLoader();
-  function handleLanguageChange(locale: "my" | "en") {
+  function handleLanguageChange(locale: Locale) {
     loader.start();
     document.cookie = `locale=${locale}; path=/; max-age=31536000`;
 
     router.refresh();
   }
 
-  const mapData: LanOption[] = [{ id: "en" }, { id: "my" }];
+  const mapData: LanOption[] = [
+    { id: "en" },
+    { id: "my" },
+    { id: "ja" },
+    { id: "ko" },
+    { id: "es" },
+  ];
   // loader for language change
   useEffect(() => {
     loader.done();
