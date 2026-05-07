@@ -1,0 +1,437 @@
+{
+  "FormEdit": {
+    "text_name": {
+      "label": "이름",
+      "placeholder": "당신의 이름"
+    },
+    "text_textarea_bio": {
+      "label": "소개",
+      "placeholder": "당신을 어떻게 표현하고 싶나요?"
+    },
+    "text_date_birth": {
+      "label": "출생 연도 (숫자로만 입력해주세요)",
+      "placeholder": "출생 연도만 입력해주세요"
+    },
+    "text_select_gender": {
+      "label": "당신의 성별",
+      "options": {
+        "none": "성별을 선택해주세요",
+        "male": "남성",
+        "female": "여성",
+        "nonBinary": "논바이너리",
+        "preferNotToSay": "밝히고 싶지 않음"
+      }
+    },
+    "text_slider_friendness": {
+      "label": "당신은 얼마나 친절한 사람이라고 생각하나요?",
+      "options": {
+        "none": "숫자 선택",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    "text_select_relationship": {
+      "label": "연애 상태",
+      "options": {
+        "none": "연애 상태를 선택해주세요",
+        "single": "싱글 (연인 없음)",
+        "relationship": "연애 중",
+        "married": "기혼",
+        "complicated": "복잡함"
+      }
+    },
+    "text_pick_mbti": {
+      "label": "MBTI",
+      "placeholder": "예: ISTJ"
+    },
+    "multiple_own_hobby": {
+      "label": "당신의 취미",
+      "placeholder": "예: 음악 감상..."
+    },
+    "multiple_fav_song": {
+      "label": "좋아하는 노래",
+      "placeholder": "예: Love 119 (RIIZE)..."
+    },
+    "multiple_fav_artist": {
+      "label": "좋아하는 아티스트",
+      "placeholder": "예: NewJeans..."
+    },
+    "multiple_fav_books": {
+      "label": "좋아하는 책",
+      "placeholder": "예: 해리포터 시리즈..."
+    },
+    "multiple_fav_food": {
+      "label": "좋아하는 음식",
+      "placeholder": "예: 후라이드 치킨..."
+    },
+    "multiple_fav_movie": {
+      "label": "좋아하는 영화 및 시리즈",
+      "placeholder": "예: 장화신은 고양이: 끝내주는 모험..."
+    },
+    "multiple_own_comfort_zone": {
+      "label": "당신의 컴포트 존 (편안함을 느끼는 곳)",
+      "placeholder": "예: 집에서 쉬기..."
+    }
+  },
+  "FormView": {
+    "text_name": {
+      "label": "이름"
+    },
+    "updated_at": {
+      "ago": "전",
+
+      "seconds": "{number}초 {ago}",
+      "second": "{number}초 {ago}",
+
+      "minutes": "{number}분 {ago}",
+      "minute": "{number}분 {ago}",
+
+      "hours": "{number}시간 {ago}",
+      "hour": "{number}시간 {ago}",
+
+      "days": "{number}일 {ago}",
+      "day": "{number}일 {ago}",
+
+      "months": "{number}개월 {ago}",
+      "month": "{number}개월 {ago}",
+
+      "years": "{number}년 {ago}",
+      "year": "{number}년 {ago}"
+    },
+    "text_textarea_bio": {
+      "label": "소개"
+    },
+    "text_date_birth": {
+      "label": "나이 / 출생 연도"
+    },
+    "text_select_gender": {
+      "label": "성별",
+      "options": {
+        "none": "성별을 선택해주세요",
+        "male": "남성",
+        "female": "여성",
+        "nonBinary": "논바이너리",
+        "preferNotToSay": "밝히고 싶지 않음"
+      }
+    },
+    "text_slider_friendness": {
+      "label": "친절도"
+    },
+    "text_select_relationship": {
+      "label": "연애 상태",
+      "options": {
+        "none": "연애 상태를 선택해주세요",
+        "single": "싱글 (연인 없음)",
+        "relationship": "연애 중",
+        "married": "기혼",
+        "complicated": "복잡함"
+      }
+    },
+    "text_pick_mbti": {
+      "label": "MBTI"
+    },
+    "multiple_own_hobby": {
+      "label": "취미"
+    },
+    "multiple_fav_song": {
+      "label": "좋아하는 노래"
+    },
+    "multiple_fav_artist": {
+      "label": "좋아하는 아티스트"
+    },
+    "multiple_fav_books": {
+      "label": "좋아하는 책"
+    },
+    "multiple_fav_food": {
+      "label": "좋아하는 음식"
+    },
+    "multiple_fav_movie": {
+      "label": "좋아하는 영화 및 시리즈"
+    },
+    "multiple_own_comfort_zone": {
+      "label": "컴포트 존"
+    }
+  },
+  "ErrorMsg": {
+    "required": "{label} 항목을 입력해야 제출할 수 있습니다",
+    "noMBTI": "MBTI를 찾을 수 없습니다",
+    "maxLength": "최대 길이는 {max}자입니다",
+    "minLength": "최소 {min}자 이상이어야 합니다",
+    "minLengthPassword": "비밀번호는 최소 {min}자 이상이어야 합니다",
+    "passwordComplexity": "비밀번호는 대문자, 소문자, 숫자, 특수 기호를 모두 포함하여 최소 {min}자 이상이어야 합니다",
+    "onlyNumbers": "영문 숫자만 입력 가능합니다",
+    "invalidYear": "올바른 출생 연도를 입력해주세요",
+    "outOfRangeYear": "1900년에서 {currentYear}년 사이의 연도를 입력해주세요",
+    "wrongEmail": "유효한 이메일 주소를 입력해주세요",
+    "wentWrong": "문제가 발생했습니다",
+    "alreadyEmail": "이미 등록된 이메일입니다",
+    "samePassword": "새 비밀번호가 기존 비밀번호와 동일합니다. 새로운 비밀번호를 사용해주세요",
+    "emailRateLimitExceeded": "현재 이메일 발송이 지연되고 있습니다. 잠시 후 다시 시도해주세요.",
+    "requestRateLimitExceeded": "요청이 너무 많습니다. 잠시 후 다시 시도해주세요.",
+    "notConfirmEmail": "먼저 이메일을 확인(인증)해주세요",
+    "wrongCredentials": "입력하신 인증 정보가 올바르지 않습니다",
+    "alreadyUser": "이미 존재하는 사용자입니다. 로그인해주세요",
+    "notFoundUser": "존재하지 않는 계정입니다. 회원가입해주세요",
+    "notFieldChange": "입력 필드의 데이터가 변경되지 않았습니다",
+    "wentWrongUploadImage": "프로필 이미지를 업로드하는 중 문제가 발생했습니다",
+    "globalErrorTitle": "이 페이지를 불러올 수 없습니다.",
+    "globalErrorText": "페이지를 새로고침하거나 뒤로 돌아가주세요.",
+    "authErrorTitle": "인증 오류",
+    "authErrorText": "인증 과정에서 오류가 발생했습니다. 다시 시도해주세요."
+  },
+  "WarningMsg": {
+    "3isMax": "최대 3개까지만 허용됩니다",
+    "unsaved": "저장되지 않은 변경 사항이 있습니다. 저장하지 않고 이동하시겠습니까?",
+    "deleteProfileWarning": "삭제를 클릭하면 프로필이 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.",
+    "deleteUserWarning": "삭제를 클릭하면 계정이 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.",
+    "needToLogin": "로그인이 필요합니다",
+    "notFoundDataTitle": "찾을 수 없음",
+    "notFoundDataText": "사용자가 아직 프로필을 생성하지 않았습니다.",
+    "globalNotFoundTitle": "페이지를 찾을 수 없습니다",
+    "globalNotFoundText": "다른 검색어로 다시 시도해주세요."
+  },
+  "NotiMsg": {
+    "editSuccess": "프로필 데이터가 성공적으로 업데이트되었습니다",
+    "deleteProfileSuccess": "프로필이 성공적으로 삭제되었습니다",
+    "deleteUserSuccess": "계정이 성공적으로 삭제되었습니다"
+  },
+  "block": {
+    "home": "홈",
+    "back": "뒤로",
+    "reload": "새로고침",
+    "noti": "알림",
+    "cancel": "취소",
+    "confirm": "확인",
+    "discard": "변경 취소",
+    "delete": "삭제",
+    "close": "닫기",
+    "submit": "제출",
+    "save": "저장",
+    "crop": "사진 자르기",
+    "theme": "테마",
+    "light": "라이트 모드",
+    "dark": "다크 모드",
+    "deviceTheme": "기기 설정",
+    "textAreaNotice": "키보드의 Enter 키를 눌러 항목을 추가할 수 있습니다.",
+    "warningImage": "(png, jpeg, webp) 형식의 파일만 업로드 가능하며, 최대 파일 크기는 3MB입니다.",
+    "not_valid": "유효한 이미지 파일을 선택해주세요.",
+    "exceed_size": "이미지 크기는 3MB를 초과할 수 없습니다.",
+    "needLoginForm": "프로필 양식을 만들기 전에 로그인이 필요합니다.",
+    "login": "로그인",
+    "signUp": "회원가입",
+    "logout": "로그아웃",
+    "edit": "수정",
+    "view": "보기",
+    "language": "언어",
+    "english": "영어 (English)",
+    "myanmar": "미얀마어 (Myanmar)",
+    "footerNoti": "이 프로필 생성 웹 애플리케이션인 마이니 (Miney)는 단 한 명의 개발자가 유지 및 관리하고 있습니다. 따라서 실시간 모니터링이나 지원을 제공하기가 쉽지 않습니다. 그러므로 중요한 개인정보(민감한 데이터)는 입력하지 않도록 주의해 주시기 바랍니다. 또한 타인에게 불쾌감을 주거나 피해를 줄 수 있는 사진이나 텍스트를 업로드하지 않도록 주의해 주세요.",
+    "legal": "법적 정보",
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관",
+    "cookie": "쿠키 정책",
+    "contact": "문의",
+    "email": "aung.c.pyae@outlook.com",
+    "beforeSubmitNotice": "프로필 양식을 저장함으로써 귀하는 마이니 (Miney)의 <privacy>개인정보 처리방침</privacy> 및 <terms>이용약관</terms>에 동의한 것으로 간주됩니다.",
+    "profileLinkCopy": "프로필 링크가 복사되었습니다",
+    "changeLanguage": "언어",
+    "en": "English",
+    "my": "မြန်မာ",
+    "ja": "日本語",
+    "ko": "한국어",
+    "zh-CN": "简体中文",
+    "es": "Español",
+    "hi": "हिन्दी",
+    "id": "Bahasa Indonesia",
+    "th": "ไทย",
+    "vi": "Tiếng Việt",
+    "deleteAcc": "계정 삭제",
+    "updatePassword": "비밀번호 변경"
+  },
+  "Privacy": {
+    "title": "개인정보 처리방침 — 마이니 (Miney)",
+    "lastUpdated": "최종 업데이트 : ",
+    "date": "2025년 11월 25일",
+    "intro": "마이니 (Miney)는 귀하의 개인정보를 존중합니다. 본 개인정보 처리방침은 귀하가 당사의 프로필 공유 웹 애플리케이션을 사용할 때 귀하의 개인 데이터를 수집, 사용 및 보호하는 방법을 설명합니다.",
+
+    "section1": {
+      "title": "1. 수집하는 정보",
+      "desc": "마이니 (Miney)를 사용할 때 다음과 같은 정보를 수집합니다:",
+      "mandatory": "이름\n성별\n친절도",
+      "optional": "프로필 사진\n소개\n출생 연도\n연애 상태\nMBTI\n취미\n좋아하는 노래, 아티스트, 책, 음식, 영화\n컴포트 존",
+      "media": "미디어: 사용자는 선택적으로 이미지를 업로드할 수 있습니다. 비디오나 문서는 요구되지 않습니다."
+    },
+
+    "section2": {
+      "title": "2. 데이터 사용 방법",
+      "use": "다른 사람들과 공유할 수 있도록 공개 프로필을 생성하기 위해.\n앱 이용 경험을 개인화하기 위해.",
+      "no": "당사는 다음을 수행하지 않습니다:\n분석 데이터 수집 (예: Google Analytics, Sentry)\n오류 추적 또는 사용자 활동 기록"
+    },
+
+    "section3": {
+      "title": "3. 데이터 저장소",
+      "desc": "프로필 정보는 Supabase Postgres에 저장됩니다.\n이미지는 Supabase Storage에 저장됩니다."
+    },
+
+    "section4": {
+      "title": "4. 인증",
+      "desc": "당사는 이메일/비밀번호 및 Google OAuth와 함께 Supabase Auth를 사용합니다."
+    },
+
+    "section5": {
+      "title": "5. 데이터 공유",
+      "desc": "당사는 Supabase 또는 Vercel과 같은 필수 인프라 제공업체를 제외하고 귀하의 개인 데이터를 제3자와 절대 공유하지 않습니다."
+    },
+
+    "section6": {
+      "title": "6. 사용자 제어",
+      "desc": "사용자는 대시보드를 통해 자신의 계정과 모든 관련 프로필 데이터를 직접 삭제할 수 있습니다. 삭제된 데이터는 복구할 수 없습니다."
+    },
+
+    "section7": {
+      "title": "7. 보안",
+      "desc": "당사는 데이터를 보호하기 위해 표준 보안 관행을 구현하지만, 완벽하게 안전한 시스템은 없다는 점을 유의해 주시기 바랍니다."
+    },
+
+    "section8": {
+      "title": "8. 고객 지원",
+      "contact": "문의 : ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Terms": {
+    "title": "이용약관 – 마이니 (Miney)",
+    "lastUpdated": "최종 업데이트 : ",
+    "date": "2025년 11월 25일",
+    "intro": "마이니 (Miney)를 사용함으로써 귀하는 다음 약관에 동의하게 됩니다:",
+
+    "section1": {
+      "title": "1. 마이니 (Miney)에 대하여",
+      "desc": "마이니 (Miney)는 Aung Chan Pyae (Bubble) 단 한 명의 개발자가 개발하고 유지 관리하는 프로필 공유 웹 애플리케이션입니다.",
+      "warning": "이 프로필 생성 웹 애플리케이션인 마이니 (Miney)는 단 한 명의 개발자가 유지 및 관리하고 있습니다. 따라서 실시간 모니터링이나 지원을 제공하기 쉽지 않습니다. 그러므로 중요한 개인정보(민감한 데이터)는 입력하지 않도록 주의해 주시기 바랍니다. 또한 타인에게 불쾌감을 주거나 피해를 줄 수 있는 사진이나 텍스트를 업로드하지 않도록 주의해 주세요."
+    },
+
+    "section2": {
+      "title": "2. 사용자의 책임",
+      "items": "• 사용자는 공개 프로필에 대해 정확한 정보를 제공해야 합니다.\n• 유해하거나 불법적인 콘텐츠를 업로드하지 마십시오."
+    },
+
+    "section3": {
+      "title": "3. 계정 관리",
+      "desc": "사용자는 언제든지 자신의 프로필을 생성, 수정 또는 삭제할 수 있습니다."
+    },
+
+    "section4": {
+      "title": "4. 책임 제한",
+      "items": "• 마이니 (Miney)는 상업용 제품이 아닙니다.\n• 개발자는 이 앱의 사용으로 인해 발생하는 어떠한 손해에 대해서도 책임을 지지 않습니다."
+    },
+
+    "section5": {
+      "title": "5. 약관의 변경",
+      "desc": "약관은 시간이 지남에 따라 변경될 수 있습니다. 서비스를 계속 사용하는 것은 변경된 약관에 동의함을 의미합니다."
+    },
+    "section6": {
+      "title": "6. 고객 지원",
+      "contact": "문의 : ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Cookie": {
+    "title": "쿠키 정책 — 마이니 (Miney)",
+    "lastUpdated": "최종 업데이트 : ",
+    "date": "2025년 11월 25일",
+    "section1": {
+      "title": "1. 쿠키란 무엇인가요?",
+      "desc": "쿠키는 앱이 사용자의 기본 설정 및 인증 세션을 기억하도록 돕기 위해 귀하의 기기에 저장되는 작은 텍스트 파일입니다."
+    },
+    "section2": {
+      "title": "2. 쿠키 사용 방법",
+      "list": "인증: 귀하를 안전하게 로그인된 상태로 유지합니다.\n언어 설정: 선택한 지역/언어를 저장합니다."
+    },
+    "section3": {
+      "title": "3. 쿠키 관리",
+      "desc": "브라우저에서 쿠키를 지우거나 차단할 수 있지만, 이 경우 일부 앱 기능이 제대로 작동하지 않을 수 있습니다."
+    },
+    "section4": {
+      "title": "4. 고객 지원",
+      "contact": "문의 : ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Auth": {
+    "createAccount": "새 계정 만들기",
+    "loginAccount": "계정에 로그인하기",
+    "email": "이메일",
+    "signInWithGoogle": "Google로 로그인",
+    "signUpWithGoogle": "Google로 가입하기",
+    "emailPlaceholder": "email@example.com",
+    "password": "비밀번호",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "forgotPasswordDescription": "이메일 주소를 입력하시면 비밀번호를 재설정할 수 있는 링크를 보내드립니다.",
+    "updatePasswordInstruction": "아래에 새 비밀번호를 입력해주세요.",
+    "resetPassword": "비밀번호 재설정",
+    "checkEmail": "이메일을 확인해주세요",
+    "updatePassword": "비밀번호 변경",
+    "resetPasswordLinkSuccessContent": "비밀번호 재설정 링크가 이메일로 전송되었습니다. 이메일을 확인하고 링크를 클릭해주세요. 보이지 않을 경우 스팸 메일함을 확인해주세요.",
+    "passwordPlaceholder": "비밀번호를 입력하세요",
+    "login": "로그인",
+    "signUp": "회원가입",
+    "sendResetLink": "재설정 링크 보내기",
+    "noAcc": "계정이 없으신가요? <link>여기서 회원가입하세요</link>",
+    "alreadyAcc": "이미 계정이 있으신가요? <link>여기서 로그인하세요</link>",
+    "signUpSuccess": "이메일을 인증해주세요",
+    "signUpSuccessContent": "회원가입이 완료되었습니다! 계정을 확인하기 위해 이메일을 확인해주세요. 보이지 않을 경우 스팸 메일함을 확인해주세요."
+  },
+  "MetaData": {
+    "cookiePage": {
+      "title": "쿠키 정책",
+      "description": "마이니 (Miney)가 사용자 경험을 향상시키고 콘텐츠를 맞춤화하기 위해 쿠키를 사용하는 방법을 알아보세요."
+    },
+    "termsPage": {
+      "title": "이용약관",
+      "description": "마이니 (Miney) 웹 앱의 이용약관을 확인하세요."
+    },
+    "privacyPage": {
+      "title": "개인정보 처리방침",
+      "description": "마이니 (Miney) 웹 앱의 개인정보 처리방침을 확인하세요."
+    },
+    "userPage": {
+      "description": "이 마이니 (Miney) 프로필에서 사용자의 취미, 좋아하는 것, 성격을 알아보세요."
+    },
+    "default": {
+      "title": "마이니 (Miney)",
+      "description": "마이니 (Miney)는 관심사, 좋아하는 것, 성격을 하나의 간단한 카드 형태로 공유할 수 있는 소셜 프로필 플랫폼입니다."
+    },
+    "authLogin": {
+      "title": "로그인",
+      "description": "마이니 (Miney) 계정에 로그인하여 프로필에 접근하고 정보를 수정하며 개인 카드를 공유하세요."
+    },
+    "authSignup": {
+      "title": "회원가입",
+      "description": "마이니 (Miney) 계정을 만들고 프로필에 접근하여 정보를 수정하고 개인 카드를 공유하세요."
+    },
+    "forgotPassword": {
+      "title": "비밀번호 찾기",
+      "description": "이메일 주소를 입력하시면 비밀번호를 재설정하고 마이니 (Miney) 계정에 다시 접속할 수 있는 링크를 보내드립니다."
+    },
+    "checkResetLinkEmail": {
+      "title": "이메일 확인",
+      "description": "비밀번호 재설정 링크를 이메일로 보내드렸습니다. 이메일을 확인해주세요."
+    },
+    "updatePassword": {
+      "title": "비밀번호 변경",
+      "description": "현재 비밀번호를 변경하려면 새 비밀번호를 입력하세요. 이전에 사용한 비밀번호와 다른 비밀번호를 사용해주세요."
+    },
+    "authError": {
+      "title": "인증 오류",
+      "description": "인증 과정에서 오류가 발생했습니다. 다시 시도해주세요."
+    },
+    "authConfirm": {
+      "title": "계정 확인",
+      "description": "이메일로 전송된 확인 링크를 통해 계정을 인증해주세요."
+    }
+  }
+}

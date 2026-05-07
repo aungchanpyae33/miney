@@ -1,0 +1,424 @@
+{
+  "FormEdit": {
+    "text_name": {
+      "label": "名前",
+      "placeholder": "あなたの名前"
+    },
+    "text_textarea_bio": {
+      "label": "自己紹介",
+      "placeholder": "自分をどのように表現しますか？"
+    },
+    "text_date_birth": {
+      "label": "誕生年",
+      "placeholder": "誕生年（半角数字）のみを入力してください"
+    },
+    "text_select_gender": {
+      "label": "あなたの性別",
+      "options": {
+        "none": "性別を選択してください",
+        "male": "男性",
+        "female": "女性",
+        "nonBinary": "ノンバイナリー",
+        "preferNotToSay": "回答しない"
+      }
+    },
+    "text_slider_friendness": {
+      "label": "自分はどのくらいフレンドリーだと思いますか？",
+      "options": {
+        "none": "数字を選択してください",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    "text_select_relationship": {
+      "label": "交際ステータス",
+      "options": {
+        "none": "交際ステータスを選択してください",
+        "single": "独身 / 恋人なし",
+        "relationship": "交際中",
+        "married": "既婚",
+        "complicated": "複雑な関係"
+      }
+    },
+    "text_pick_mbti": {
+      "label": "MBTI",
+      "placeholder": "例: ISTJ"
+    },
+    "multiple_own_hobby": {
+      "label": "あなたの趣味",
+      "placeholder": "例: 音楽鑑賞..."
+    },
+    "multiple_fav_song": {
+      "label": "お気に入りの曲",
+      "placeholder": "例: Love 119 (RIIZE)..."
+    },
+    "multiple_fav_artist": {
+      "label": "好きなアーティスト",
+      "placeholder": "例: NewJeans..."
+    },
+    "multiple_fav_books": {
+      "label": "好きな本",
+      "placeholder": "例: 吾輩は猫である..."
+    },
+    "multiple_fav_food": {
+      "label": "好きな食べ物",
+      "placeholder": "例: フライドチキン..."
+    },
+    "multiple_fav_movie": {
+      "label": "好きな映画・ドラマ",
+      "placeholder": "例: 長ぐつをはいたネコ..."
+    },
+    "multiple_own_comfort_zone": {
+      "label": "あなたのコンフォートゾーン",
+      "placeholder": "例: 家で過ごすこと..."
+    }
+  },
+  "FormView": {
+    "text_name": {
+      "label": "名前"
+    },
+    "updated_at": {
+      "ago": "前",
+
+      "seconds": "{number}秒{ago}",
+      "second": "{number}秒{ago}",
+
+      "minutes": "{number}分{ago}",
+      "minute": "{number}分{ago}",
+
+      "hours": "{number}時間{ago}",
+      "hour": "{number}時間{ago}",
+
+      "days": "{number}日{ago}",
+      "day": "{number}日{ago}",
+
+      "months": "{number}ヶ月{ago}",
+      "month": "{number}ヶ月{ago}",
+
+      "years": "{number}年{ago}",
+      "year": "{number}年{ago}"
+    },
+    "text_textarea_bio": {
+      "label": "自己紹介"
+    },
+    "text_date_birth": {
+      "label": "誕生年"
+    },
+    "text_select_gender": {
+      "label": "性別",
+      "options": {
+        "none": "性別を選択してください",
+        "male": "男性",
+        "female": "女性",
+        "nonBinary": "ノンバイナリー",
+        "preferNotToSay": "回答しない"
+      }
+    },
+    "text_slider_friendness": {
+      "label": "フレンドリーさ"
+    },
+    "text_select_relationship": {
+      "label": "交際ステータス",
+      "options": {
+        "none": "交際ステータスを選択してください",
+        "single": "独身 / 恋人なし",
+        "relationship": "交際中",
+        "married": "既婚",
+        "complicated": "複雑な関係"
+      }
+    },
+    "text_pick_mbti": {
+      "label": "MBTI"
+    },
+    "multiple_own_hobby": {
+      "label": "趣味"
+    },
+    "multiple_fav_song": {
+      "label": "お気に入りの曲"
+    },
+    "multiple_fav_artist": {
+      "label": "好きなアーティスト"
+    },
+    "multiple_fav_books": {
+      "label": "好きな本"
+    },
+    "multiple_fav_food": {
+      "label": "好きな食べ物"
+    },
+    "multiple_fav_movie": {
+      "label": "好きな映画・ドラマ"
+    },
+    "multiple_own_comfort_zone": {
+      "label": "コンフォートゾーン"
+    }
+  },
+  "ErrorMsg": {
+    "required": "{label} フィールドを入力してください",
+    "noMBTI": "MBTIが見つかりません",
+    "maxLength": "最大文字数は {max} 文字です",
+    "minLength": "最小文字数は {min} 文字です",
+    "minLengthPassword": "パスワードは少なくとも {min} 文字である必要があります",
+    "passwordComplexity": "パスワードには、大文字、小文字、数字、記号を含め、少なくとも {min} 文字である必要があります",
+    "onlyNumbers": "半角数字のみ入力可能です",
+    "invalidYear": "正しい誕生年を入力してください",
+    "outOfRangeYear": "1900年から{currentYear}年の間で入力してください",
+    "wrongEmail": "有効なメールアドレスを入力してください",
+    "wentWrong": "問題が発生しました",
+    "alreadyEmail": "このメールアドレスは既に登録されています",
+    "samePassword": "新しいパスワードが現在のパスワードと同じです。別のパスワードを使用してください",
+    "emailRateLimitExceeded": "現在メールの配信が混み合っています。後でもう一度お試しください。",
+    "requestRateLimitExceeded": "リクエストが多すぎます。後でもう一度お試しください。",
+    "notConfirmEmail": "先にメールアドレスの確認を行ってください",
+    "wrongCredentials": "入力された資格情報が間違っています",
+    "alreadyUser": "このユーザーは既に存在します。ログインしてください",
+    "notFoundUser": "ユーザーが存在しません。サインアップしてください",
+    "notFieldChange": "入力データは変更されていません",
+    "wentWrongUploadImage": "画像のアップロード中に問題が発生しました",
+    "globalErrorTitle": "このページを読み込めませんでした。",
+    "globalErrorText": "再読み込みするか、前のページに戻ってください。",
+    "authErrorTitle": "認証エラー",
+    "authErrorText": "認証中にエラーが発生しました。もう一度お試しください。"
+  },
+  "WarningMsg": {
+    "3isMax": "最大3つまで追加できます",
+    "unsaved": "保存されていない変更があります。保存せずに表示してもよろしいですか？",
+    "deleteProfileWarning": "「削除」をクリックすると、プロフィールは完全に削除されます。この操作は元に戻せません。",
+    "deleteUserWarning": "「削除」をクリックすると、アカウントは完全に削除されます。この操作は元に戻せません。",
+    "needToLogin": "サインインが必要です",
+    "notFoundDataTitle": "見つかりません",
+    "notFoundDataText": "ユーザーはまだプロフィールを作成していません。",
+    "globalNotFoundTitle": "ページが見つかりません",
+    "globalNotFoundText": "別のキーワードで検索してみてください"
+  },
+  "NotiMsg": {
+    "editSuccess": "プロフィールのデータが正常に更新されました",
+    "deleteProfileSuccess": "プロフィールのデータが正常に削除されました",
+    "deleteUserSuccess": "アカウントが正常に削除されました"
+  },
+  "block": {
+    "home": "ホーム",
+    "back": "戻る",
+    "reload": "再読み込み",
+    "noti": "通知",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "discard": "破棄",
+    "delete": "削除",
+    "close": "閉じる",
+    "submit": "送信",
+    "save": "保存",
+    "crop": "画像を切り抜く",
+    "theme": "テーマ",
+    "light": "ライト",
+    "dark": "ダーク",
+    "deviceTheme": "端末のテーマ",
+    "textAreaNotice": "キーボードのEnterキーを押してアイテムを追加できます",
+    "warningImage": "アップロード可能な形式は(png, jpeg, webp)で、最大ファイルサイズは3MBです",
+    "not_valid": "有効な画像ファイルを選択してください。",
+    "exceed_size": "画像のサイズは3MBを超えてはいけません。",
+    "needLoginForm": "プロフィールフォームを作成する前にログインする必要があります",
+    "login": "ログイン",
+    "signUp": "サインアップ",
+    "logout": "ログアウト",
+    "edit": "編集",
+    "view": "表示",
+    "language": "言語",
+    "english": "英語",
+    "myanmar": "ミャンマー語",
+    "footerNoti": "このプロフィール作成ウェブアプリ「マイニー (Miney)」は、1人の開発者によって運営されています。そのため、リアルタイムでの監視やサポートは容易ではありません。重要な個人情報 (機密データ) は入力しないようご注意ください。また、他人に迷惑や不快感を与える画像やテキストのアップロードはお控えください。",
+    "legal": "法的情報",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "cookie": "クッキーポリシー",
+    "contact": "お問い合わせ",
+    "email": "aung.c.pyae@outlook.com",
+    "beforeSubmitNotice": "プロフィールフォームを保存することにより、マイニー (Miney) の<privacy>プライバシーポリシー</privacy>および<terms>利用規約</terms>に同意したものとみなされます。",
+    "profileLinkCopy": "プロフィールのリンクをコピーしました",
+    "changeLanguage": "言語",
+    "en": "English",
+    "my": "မြန်မာ",
+    "ja": "日本語",
+    "ko": "한국어",
+    "zh-CN": "简体中文",
+    "es": "Español",
+    "hi": "हिन्दी",
+    "id": "Bahasa Indonesia",
+    "th": "ไทย",
+    "vi": "Tiếng Việt",
+    "deleteAcc": "アカウントを削除",
+    "updatePassword": "パスワードを更新"
+  },
+  "Privacy": {
+    "title": "プライバシーポリシー — マイニー (Miney)",
+    "lastUpdated": "最終更新日 : ",
+    "date": "25 November 2025",
+    "intro": "マイニー (Miney) はお客様のプライバシーを尊重します。このプライバシーポリシーでは、当社のプロフィール共有ウェブアプリを使用する際の個人データの収集、使用、および保護について説明します。",
+    "section1": {
+      "title": "1. 収集する情報",
+      "desc": "マイニー (Miney) を使用する際、以下の情報を収集します：",
+      "mandatory": "名前\n性別\nフレンドリーさ",
+      "optional": "プロフィール写真\n自己紹介\n誕生年\n交際ステータス\nMBTI\n趣味\n好きな曲、アーティスト、本、食べ物、映画\nコンフォートゾーン",
+      "media": "メディア：ユーザーは任意で画像をアップロードできます。動画やドキュメントは必要ありません（アップロードできません）。"
+    },
+    "section2": {
+      "title": "2. データの使用方法",
+      "use": "他の人と共有するための公開プロフィールの作成。\nアプリ体験のパーソナライズ。",
+      "no": "以下は行いません：\n分析データの収集（例：Google Analytics、Sentryなど）\nエラーの追跡やユーザーアクティビティの記録"
+    },
+    "section3": {
+      "title": "3. データの保存",
+      "desc": "プロフィール情報は Supabase Postgres に保存されます。\n画像は Supabase Storage に保存されます。"
+    },
+    "section4": {
+      "title": "4. 認証",
+      "desc": "メール/パスワードおよび Google OAuth による Supabase Auth を使用しています。"
+    },
+    "section5": {
+      "title": "5. データの共有",
+      "desc": "Supabase や Vercel のような必要なインフラプロバイダーを除き、個人データを第三者と共有することは絶対にありません。"
+    },
+    "section6": {
+      "title": "6. ユーザーコントロール",
+      "desc": "ダッシュボードからアカウントと関連するすべてのプロフィールデータを削除することができます。一度削除したデータは復元できません。"
+    },
+    "section7": {
+      "title": "7. セキュリティ",
+      "desc": "データを保護するために標準的なセキュリティ対策を実施していますが、完全に安全なシステムは存在しないことにご留意ください。"
+    },
+    "section8": {
+      "title": "8. お問い合わせ",
+      "contact": "連絡先 : ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Terms": {
+    "title": "利用規約 – マイニー (Miney)",
+    "lastUpdated": "最終更新日 : ",
+    "date": "25 November 2025",
+    "intro": "マイニー (Miney) を使用することにより、以下の条項に同意したものとみなされます：",
+    "section1": {
+      "title": "1. マイニー (Miney) について",
+      "desc": "マイニー (Miney) は、Aung Chan Pyae (Bubble) が単独で開発および運営しているプロフィール共有ウェブアプリです。",
+      "warning": "このプロフィール作成ウェブアプリ「マイニー (Miney)」は、1人の開発者によって運営されています。そのため、リアルタイムでの監視やサポートは容易ではありません。重要な個人情報 (機密データ) は入力しないようご注意ください。また、他人に迷惑や不快感を与える画像やテキストのアップロードはお控えください。"
+    },
+    "section2": {
+      "title": "2. ユーザーの責任",
+      "items": "• ユーザーは公開プロフィールに正確な情報を提供する必要があります。\n• 有害または違法なコンテンツをアップロードしないでください。"
+    },
+    "section3": {
+      "title": "3. アカウント管理",
+      "desc": "ユーザーはいつでも自分のプロフィールを作成、編集、または削除することができます。"
+    },
+    "section4": {
+      "title": "4. 責任の制限",
+      "items": "• マイニー (Miney) は商用製品ではありません。\n• 開発者は、本アプリの使用によって生じたいかなる損害についても責任を負いません。"
+    },
+    "section5": {
+      "title": "5. 規約の変更",
+      "desc": "規約は時間の経過とともに変更される場合があります。継続して使用することで、変更に同意したものとみなされます。"
+    },
+    "section6": {
+      "title": "6. お問い合わせ",
+      "contact": "連絡先 : ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Cookie": {
+    "title": "クッキーポリシー — マイニー (Miney)",
+    "lastUpdated": "最終更新日 : ",
+    "date": "25 November 2025",
+    "section1": {
+      "title": "1. クッキーとは？",
+      "desc": "クッキー（Cookies）は、アプリがユーザーの環境設定や認証セッションを記憶するのに役立つ、デバイスに保存される小さなファイルです。"
+    },
+    "section2": {
+      "title": "2. クッキーの使用方法",
+      "list": "認証：安全なログイン状態を維持します。\n言語設定：選択した地域/言語を保存します。"
+    },
+    "section3": {
+      "title": "3. クッキーの管理",
+      "desc": "ブラウザでクッキーを消去またはブロックすることができますが、アプリの一部機能が正しく動作しなくなる可能性があります。"
+    },
+    "section4": {
+      "title": "4. お問い合わせ",
+      "contact": "連絡先 : ",
+      "email": "aung.c.pyae@outlook.com"
+    }
+  },
+  "Auth": {
+    "createAccount": "新しいアカウントを作成",
+    "loginAccount": "アカウントにログイン",
+    "email": "メールアドレス",
+    "signInWithGoogle": "Googleでログイン",
+    "signUpWithGoogle": "Googleでサインアップ",
+    "emailPlaceholder": "email@example.com",
+    "password": "パスワード",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "forgotPasswordDescription": "メールアドレスを入力すると、パスワードをリセットするためのリンクが送信されます。",
+    "updatePasswordInstruction": "以下に新しいパスワードを入力してください。",
+    "resetPassword": "パスワードのリセット",
+    "checkEmail": "メールを確認してください",
+    "updatePassword": "パスワードを更新",
+    "resetPasswordLinkSuccessContent": "パスワードリセットリンクをメールアドレスに送信しました。メールを確認し、リンクをクリックしてください。見当たらない場合は、迷惑メールフォルダも確認してください。",
+    "passwordPlaceholder": "パスワード",
+    "login": "ログイン",
+    "signUp": "サインアップ",
+    "sendResetLink": "リセットリンクを送信",
+    "noAcc": "アカウントをお持ちではありませんか？ <link>こちらで登録</link>",
+    "alreadyAcc": "すでにアカウントをお持ちですか？ <link>こちらでログイン</link>",
+    "signUpSuccess": "メールアドレスを確認してください",
+    "signUpSuccessContent": "サインアップが完了しました！メールを確認してアカウントを認証してください。見当たらない場合は、迷惑メールフォルダも確認してください。"
+  },
+  "MetaData": {
+    "cookiePage": {
+      "title": "クッキーポリシー",
+      "description": "マイニー (Miney) がユーザー体験を向上させ、コンテンツをパーソナライズするためにクッキーをどのように使用しているかをご確認ください。"
+    },
+    "termsPage": {
+      "title": "利用規約",
+      "description": "マイニー (Miney) ウェブアプリの利用規約をご確認ください。"
+    },
+    "privacyPage": {
+      "title": "プライバシーポリシー",
+      "description": "マイニー (Miney) ウェブアプリのプライバシーポリシーをご確認ください。"
+    },
+    "userPage": {
+      "description": "この マイニー (Miney) プロフィールをチェックして、ユーザーの趣味、お気に入り、性格について知ることができます。"
+    },
+    "default": {
+      "title": "マイニー (Miney)",
+      "description": "マイニー (Miney) は、あなたの趣味、お気に入り、性格を1つのシンプルなカードとして共有できるソーシャルプロフィールプラットフォームです。"
+    },
+    "authLogin": {
+      "title": "ログイン",
+      "description": "マイニー (Miney) アカウントにログインして、プロフィールにアクセスし、情報を編集してパーソナルカードを共有しましょう。"
+    },
+    "authSignup": {
+      "title": "サインアップ",
+      "description": "マイニー (Miney) アカウントにサインアップして、プロフィールにアクセスし、情報を編集してパーソナルカードを共有しましょう。"
+    },
+    "forgotPassword": {
+      "title": "パスワードをお忘れの方",
+      "description": "メールアドレスを入力すると、パスワードをリセットし、マイニー (Miney) アカウントに再びアクセスするためのリンクが送信されます。"
+    },
+    "checkResetLinkEmail": {
+      "title": "メールを確認してください",
+      "description": "メールにパスワードリセットリンクを送信しました。メールをご確認ください。"
+    },
+    "updatePassword": {
+      "title": "パスワードを更新",
+      "description": "現在のパスワードを変更するために新しいパスワードを入力してください。以前のパスワードとは異なるものを使用してください。"
+    },
+    "authError": {
+      "title": "認証エラー",
+      "description": "認証中にエラーが発生しました。もう一度お試しください。"
+    },
+    "authConfirm": {
+      "title": "アカウントの確認",
+      "description": "メールに送信された確認リンクを使用して、アカウントを認証してください。"
+    }
+  }
+}

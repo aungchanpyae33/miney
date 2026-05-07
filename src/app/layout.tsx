@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Noto_Sans, Noto_Sans_Myanmar } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import NextTopLoader from "nextjs-toploader";
@@ -9,17 +8,6 @@ import DeviceCheckFetcher from "@/ui/DeviceCheck/DeviceCheckFetcher";
 import { NextIntlClientProvider } from "next-intl";
 import { outputBaseUrl } from "@/lib/outputBaseUrl";
 import LayoutLocalFetch from "@/ui/general/layout/LocalLayoutFetch";
-
-const notoSans = Noto_Sans({
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const notoSansMyanmar = Noto_Sans_Myanmar({
-  subsets: ["myanmar"],
-  display: "swap",
-  weight: "400",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -55,9 +43,7 @@ export default function RootLayout({
   return (
     <Suspense fallback={<PageLoading />}>
       <LayoutLocalFetch>
-        <body
-          className={`${notoSans.className} ${notoSansMyanmar.className} antialiased`}
-        >
+        <body className="antialiased">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

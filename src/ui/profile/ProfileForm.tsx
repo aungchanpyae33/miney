@@ -29,7 +29,7 @@ export const defaultProfile = {
   profile_avatar_url: "",
   text_name: "",
   text_select_gender: "",
-  text_slider_friendness: "",
+  text_slider_friendness: "51",
   text_textarea_bio: "",
   text_date_birth: "",
   text_select_relationship: "",
@@ -112,7 +112,6 @@ export default function ProfileForm() {
         boolean
       >;
       const isEmpty = Object.keys(dirtyFields).length === 0;
-      console.log("dirtyFields", dirtyFields);
       for (const key in methods.formState.dirtyFields) {
         changedFields[key] = data[key as keyof RemoveUnused<FormDataType>];
       }
